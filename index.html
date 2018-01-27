@@ -14,27 +14,32 @@
   </head>
   <body>
     <div id="page">
-      <nav class="site-navbar">
+      <nav class="site-navbar helvetica-neue-bold">
   <div>
     <a href="index.html">
-      <img src="" alt="Logo">
+      <img class="site-navbar-logo" src="img/logos/dimsa-grey.png" alt="Logo">
     </a>
   </div>
   <div class="navbar-option-link-container">
-    <a href="index.html" class="navbar-option-link">
+    <a href="index.html" class="navbar-option-link  active-link ">
       <span>Inicio</span>
+      <div class="link-decorator  decorator-active "></div>
     </a>
-    <a href="nosotros.html" class="navbar-option-link">
+    <a href="nosotros.html" class="navbar-option-link ">
       <span>Nosotros</span>
+      <div class="link-decorator "></div>
     </a>
-    <a href="servicios.html" class="navbar-option-link">
+    <a href="servicios.html" class="navbar-option-link ">
       <span>Servicios</span>
+      <div class="link-decorator "></div>
     </a>
-    <a href="categorias.html" class="navbar-option-link">
+    <a href="categorias.html" class="navbar-option-link ">
       <span>Categorías</span>
+      <div class="link-decorator "></div>
     </a>
-    <a href="contacto.html" class="navbar-option-link">
+    <a href="contacto.html" class="navbar-option-link ">
       <span>Contacto</span>
+      <div class="link-decorator "></div>
     </a>
   </div>
   <div data-attribute="" class="navbar-hamburguer-visibility"  id="hamburgerMenu">
@@ -89,26 +94,105 @@
       <main>
         
   <div>
-    <h1>Homepage</h1>
+    <div class="home-cover">
+      <h1 class="home-cover-title">Fabricamos soluciones<br>de empaque</h1>
+      <div class="home-cover-description-container">
+        <p class="home-cover-description">
+          Nos encontramos en una constante búsqueda de nuevas y mejores soluciones de empaque
+        </p>
+      </div>
+      <a href="">
+        <button class="dimsa-button">ver productos</button>
+      </a>
+    </div>
+
+    <div class="home-why-dimsa">
+      <h1 class="home-why-dimsa-title">¿Por qué dimsa?</h1>
+      <div class="home-why-dimsa-description-container">
+        <p class="home-why-dimsa-description helvetica-neue-bold">
+          Integramos diversos procesos de transformación con el fin de satisfacer mercados que requieran empaques flexibles de alta calidad.
+        </p>
+      </div>
+      <a href="">
+        <button class="dimsa-button helvetica-neue-bold">conoce más</button>
+      </a>
+    </div>
+
+    <div class="home-iso">
+      <img class="home-iso-logo" src="img/logos/iso-9001.png">
+      <div class="home-iso-description-container">
+        <span class="home-iso-description helvetica-neue-bold">contamos<br>con certificación<br>iso9001</span>
+      </div>
+    </div>
+
+    <div class="home-design">
+      <div>
+        <h1 class="home-design-title helvetica-neue-bold">diseña tu empaque</h1>
+      </div>
+      <div class="home-design-right-container">
+        <p class="home-design-description helvetica-neue-medium">
+          Nos encontramos en una constante búsqueda de nuevas y mejores soluciones de empaque, desarrollando nuevos productos a la medida de cada cliente.
+        </p>
+        <div class="home-design-decorator"></div>
+        <a href="">
+          <button class="dimsa-button">más información</button>
+        </a>
+      </div>
+      <div class="home-design-img-container">
+        <img class="home-design-img" src="img/home/dimsa-info.jpg">
+      </div>
+    </div>
+
+    <div class="home-footer">
+      <span class="home-footer-text helvetica-neue-bold">clientes principales</span>
+      <div class="home-footer-separator"></div>
+      <div>
+        <img class="home-footer-logo-scribe" src="img/logos/scribe.png">
+      </div>
+      <div>
+        <img class="home-footer-logo-peosa" src="img/logos/grupo-peosa.png">
+      </div>
+      <div>
+        <img class="home-footer-logo-pappel" src="img/logos/bio-pappel.png">
+      </div>
+    </div>
   </div>
 
       </main>
       <footer class="site-footer">
-  <a href="index.html">
-    <span>Homepage</span>
-  </a>
-  <a href="nosotros.html">
-    <span>Nosotros</span>
-  </a>
-  <a href="servicios.html">
-    <span>Servicios</span>
-  </a>
-  <a href="categorias.html">
-    <span>Categorías</span>
-  </a>
-  <a href="contacto.html">
-    <span>Contacto</span>
-  </a>
+  <div class="site-footer-row-section helvetica-neue-medium">
+    <div>
+      <img class="site-footer-logo" src="img/logos/dimsa-white.png">
+    </div>
+    <div class="site-footer-row-descript">
+      <span>Horario de atención<br>De 9:00 am a 6:00 pm</span>
+      <span>Lebrija 151, Col.<br>Cerro de la estrella CP 09860<br>Del. Iztapalapa</span>
+      <span>Tel: 542. 652. 08<br> <a href="mailto: informes@dim-sa.com.mx">informes@dim-sa.com.mx</a><br></span>
+    </div>
+  </div>
+  <div class="site-footer-divider"></div>
+  <div class="site-footer-row-section helvetica-neue-bold">
+    <div>
+      <span>© 2018, Dimsa</span>
+    </div>
+    <div class="site-footer-row-descript">
+      <a class="site-footer-link  footer-active " href="index.html">
+        <span>Homepage</span>
+      </a>
+      <a class="site-footer-link " href="nosotros.html">
+        <span>Nosotros</span>
+      </a>
+      <a class="site-footer-link " href="servicios.html">
+        <span>Servicios</span>
+      </a>
+      <a class="site-footer-link " href="categorias.html">
+        <span>Categorías</span>
+      </a>
+      <a class="site-footer-link " href="contacto.html">
+        <span>Contacto</span>
+      </a>
+    </div>
+  </div>
 </footer>
 
     </div>
