@@ -9,7 +9,8 @@
     
     <link rel="stylesheet" href="css/project-dimsa.libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link runat="server" rel="shortcut icon" href="img/favicon/dimsa-favicon.png" type="image/x-icon"/>
+    <link runat="server" rel="icon" href="img/favicon/dimsa-favicon.png" type="image/ico"/>
     <title> - project-dimsa</title>
   </head>
   <body>
@@ -33,10 +34,26 @@
       <span>Servicios</span>
       <div class="link-decorator "></div>
     </a>
+       
+    <!--
     <a href="categorias.html" class="navbar-option-link ">
       <span>Categorías</span>
       <div class="link-decorator "></div>
     </a>
+    -->
+
+    <div class="dropdown navbar-option-link ">
+      <span onclick="myFunction()" class="dropbtn">Categorías</span>
+      <div class="link-decorator "></div>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="categorias.html">Reservas</a>
+        <a href="">Planes</a>
+        <a href="">Pagos</a>
+        <a href="">Reservación y uso de espacios</a>
+        <a href="">Pruebas</a>
+      </div>
+    </div>
+
     <a href="contacto.html" class="navbar-option-link  active-link ">
       <span>Contacto</span>
       <div class="link-decorator  decorator-active "></div>
@@ -91,6 +108,7 @@
     </div>
   </div>
 </nav>
+
       <main>
         
   <div>
@@ -99,6 +117,14 @@
 
       </main>
       <footer class="site-footer">
+  <div class="site-footer-go-top">
+    <div class="line-animated-container">
+      <div class="line-animated"></div>
+    </div>
+    <a href="#top">
+      <span class="home-view-more-text">subir</span>
+    </a>
+  </div>
   <div class="site-footer-row-section helvetica-neue-medium">
     <div>
       <img class="site-footer-logo" src="img/logos/dimsa-white.png">
@@ -106,7 +132,7 @@
     <div class="site-footer-row-descript">
       <span>Horario de atención<br>De 9:00 am a 6:00 pm</span>
       <span>Lebrija 151, Col.<br>Cerro de la estrella CP 09860<br>Del. Iztapalapa</span>
-      <span>Tel: 542. 652. 08<br> <a href="mailto: informes@dim-sa.com.mx">informes@dim-sa.com.mx</a><br></span>
+      <span>Tel: 542. 652. 08<br> <a href="mailto: informes@dim-sa.com.mx">informes@dim-sa.com.mx</a><br><a href="https://www.facebook.com/DIMSA-176436996437469/" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></span>
     </div>
   </div>
   <div class="site-footer-divider"></div>
@@ -115,9 +141,6 @@
       <span>© 2018, Dimsa</span>
     </div>
     <div class="site-footer-row-descript">
-      <a class="site-footer-link " href="index.html">
-        <span>Homepage</span>
-      </a>
       <a class="site-footer-link " href="nosotros.html">
         <span>Nosotros</span>
       </a>
@@ -125,7 +148,7 @@
         <span>Servicios</span>
       </a>
       <a class="site-footer-link " href="categorias.html">
-        <span>Categorías</span>
+        <span>Productos</span>
       </a>
       <a class="site-footer-link  footer-active " href="contacto.html">
         <span>Contacto</span>

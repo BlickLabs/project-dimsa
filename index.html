@@ -9,7 +9,8 @@
     
     <link rel="stylesheet" href="css/project-dimsa.libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link runat="server" rel="shortcut icon" href="img/favicon/dimsa-favicon.png" type="image/x-icon"/>
+    <link runat="server" rel="icon" href="img/favicon/dimsa-favicon.png" type="image/ico"/>
     <title>project-dimsa</title>
   </head>
   <body>
@@ -33,10 +34,26 @@
       <span>Servicios</span>
       <div class="link-decorator "></div>
     </a>
+       
+    <!--
     <a href="categorias.html" class="navbar-option-link ">
       <span>Categorías</span>
       <div class="link-decorator "></div>
     </a>
+    -->
+
+    <div class="dropdown navbar-option-link ">
+      <span onclick="myFunction()" class="dropbtn">Categorías</span>
+      <div class="link-decorator "></div>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="categorias.html">Reservas</a>
+        <a href="">Planes</a>
+        <a href="">Pagos</a>
+        <a href="">Reservación y uso de espacios</a>
+        <a href="">Pruebas</a>
+      </div>
+    </div>
+
     <a href="contacto.html" class="navbar-option-link ">
       <span>Contacto</span>
       <div class="link-decorator "></div>
@@ -91,19 +108,93 @@
     </div>
   </div>
 </nav>
+
       <main>
         
   <div>
-    <div class="home-cover">
-      <h1 class="home-cover-title">Fabricamos soluciones<br>de empaque</h1>
-      <div class="home-cover-description-container">
-        <p class="home-cover-description">
-          Nos encontramos en una constante búsqueda de nuevas y mejores soluciones de empaque
-        </p>
+    <div class="cover-carousel-container">
+      <div class="home-cover-decorator"></div>
+      <div class="cover-carousel owl-carousel owl-theme">
+        <div class="home-cover helvetica-neue-bold">
+          <h1 class="home-cover-title">Fabricamos soluciones<br>de empaque</h1>
+          <div class="home-cover-description-container">
+            <p class="home-cover-description helvetica-neue-medium">
+              Nos encontramos en una constante búsqueda de nuevas y mejores soluciones de empaque
+            </p>
+          </div>
+          <a href="">
+            <button class="dimsa-button">ver productos</button>
+          </a>
+        </div>
+        <div class="home-cover helvetica-neue-bold">
+          <h1 class="home-cover-title">Prueba</h1>
+          <div class="home-cover-description-container">
+            <p class="home-cover-description helvetica-neue-medium">
+              Esta es una prueba para el carrusel del cover
+            </p>
+          </div>
+          <a href="">
+            <button class="dimsa-button">ver productos</button>
+          </a>
+        </div>
+        <div class="home-cover helvetica-neue-bold">
+          <h1 class="home-cover-title">Prueba</h1>
+          <div class="home-cover-description-container">
+            <p class="home-cover-description helvetica-neue-medium">
+              Resulta que esta es otra prueba para el carrusel del cover
+            </p>
+          </div>
+          <a href="">
+            <button class="dimsa-button">ver productos</button>
+          </a>
+        </div>
       </div>
-      <a href="">
-        <button class="dimsa-button">ver productos</button>
-      </a>
+      <div class="home-view-more-text-container">
+        <span class="home-view-more-text">ver más</span>
+        <div class="line-animated-container">
+          <div class="line-animated"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-products">
+      <div class="home-products-info">
+        <div>
+          <h1 class="home-design-title helvetica-neue-bold">productos</h1>
+        </div>
+        <div class="home-design-right-container">
+          <p class="home-design-description helvetica-neue-medium">
+            Comprometidos no sólo con nuestros clientes directos, sino también con los consumidores finales de nuestros productos
+          </p>
+          <div class="home-design-decorator"></div>
+        </div>
+      </div>
+      <div class="products-carousel owl-carousel owl-theme helvetica-neue-bold">
+        <div class="home-products-card papper">
+          <div>
+            <img class="home-products-icon papper-i" src="img/icons/icon-papper.png">
+          </div>
+          <span class="home-products-category">papeles y películas<br>laminadas</span>
+        </div>
+        <div class="home-products-card packing">
+          <div>
+            <img class="home-products-icon packing-i" src="img/icons/icon-packing.png">
+          </div>
+          <span class="home-products-category">empaques<br>alimenticios</span>
+        </div>
+        <div class="home-products-card specialties">
+          <div>
+            <img class="home-products-icon specialties-i" src="img/icons/icon-specialties.png">
+          </div>
+          <span class="home-products-category">especialidades</span>
+        </div>
+        <div class="home-products-card metallic">
+          <div>
+            <img class="home-products-icon metallic-i" src="img/icons/icon-metallic.png">
+          </div>
+          <span class="home-products-category">metálicos</span>
+        </div>
+      </div>
     </div>
 
     <div class="home-why-dimsa">
@@ -126,6 +217,11 @@
     </div>
 
     <div class="home-design">
+      <div class="home-design-line">
+        <div class="line-animated-container">
+          <div class="line-animated"></div>
+        </div>
+      </div>
       <div>
         <h1 class="home-design-title helvetica-neue-bold">diseña tu empaque</h1>
       </div>
@@ -160,6 +256,14 @@
 
       </main>
       <footer class="site-footer">
+  <div class="site-footer-go-top">
+    <div class="line-animated-container">
+      <div class="line-animated"></div>
+    </div>
+    <a href="#top">
+      <span class="home-view-more-text">subir</span>
+    </a>
+  </div>
   <div class="site-footer-row-section helvetica-neue-medium">
     <div>
       <img class="site-footer-logo" src="img/logos/dimsa-white.png">
@@ -167,7 +271,7 @@
     <div class="site-footer-row-descript">
       <span>Horario de atención<br>De 9:00 am a 6:00 pm</span>
       <span>Lebrija 151, Col.<br>Cerro de la estrella CP 09860<br>Del. Iztapalapa</span>
-      <span>Tel: 542. 652. 08<br> <a href="mailto: informes@dim-sa.com.mx">informes@dim-sa.com.mx</a><br></span>
+      <span>Tel: 542. 652. 08<br> <a href="mailto: informes@dim-sa.com.mx">informes@dim-sa.com.mx</a><br><a href="https://www.facebook.com/DIMSA-176436996437469/" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></span>
     </div>
   </div>
   <div class="site-footer-divider"></div>
@@ -176,9 +280,6 @@
       <span>© 2018, Dimsa</span>
     </div>
     <div class="site-footer-row-descript">
-      <a class="site-footer-link  footer-active " href="index.html">
-        <span>Homepage</span>
-      </a>
       <a class="site-footer-link " href="nosotros.html">
         <span>Nosotros</span>
       </a>
@@ -186,7 +287,7 @@
         <span>Servicios</span>
       </a>
       <a class="site-footer-link " href="categorias.html">
-        <span>Categorías</span>
+        <span>Productos</span>
       </a>
       <a class="site-footer-link " href="contacto.html">
         <span>Contacto</span>
