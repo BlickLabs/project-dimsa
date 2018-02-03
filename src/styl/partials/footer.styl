@@ -1,6 +1,67 @@
 .site-footer
-  background-color black
+  background-image url("../img/backgrounds/footer-dimsa.jpg")
+  background-position center
+  background-repeat no-repeat
+  background-size cover
   bottom 0
-  height 65px
+  color $dWhite
+  display flex
+  flex-direction column
+  font-size $font12
+  height 372px
+  justify-content center
+  padding 0 130px
   position absolute
   width 100%
+
+  &-go-top
+    align-items center
+    display flex
+    flex-direction row
+    position absolute
+    right 0
+    top 30px
+    transform rotate(90deg)
+
+  &
+    .line-animated-container
+      margin-right 15px
+
+  &-logo
+    height 69px
+    width 134px
+
+  &-divider
+    background-color $dWhite
+    height 2px
+    margin 50px 0
+    width 100%
+
+  &-row-section
+    display flex
+    justify-content space-between
+
+  &-row-descript
+    display flex
+    flex-direction row
+
+    & > a,
+    & > span a
+      color $dWhite
+
+    & span
+      line-height 23px
+      text-align right
+
+    & span:nth-child(2)
+      margin 0 35px
+
+  &-link
+    margin-left 40px
+    transition all 0.6s
+
+    &.footer-active,
+    &:hover
+      color $dGraySelect
+      text-decoration underline
+      transition all 0.4s
