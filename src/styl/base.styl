@@ -14,7 +14,7 @@ html
 
 body
   font-size inherit
-  margin 78px 0 65px 0
+  margin 153px 0 372px 0
 
   &.noscroll
     overflow hidden
@@ -24,9 +24,13 @@ body
       opacity 1
       z-index 9
 
+h1, h2, h3, h4, h5, h6, p
+  margin 0
+
 a
   &, &:focus, &:hover, &:active
     text-decoration none
+    outline none
 
 #page
   margin 0
@@ -97,6 +101,112 @@ textarea
 .site-title
   text-align center
 
+.dimsa-button
+  background-color $dRedButton
+  border none
+  border-radius 100px
+  color $dWhite
+  cursor pointer
+  font-size $font12
+  height 42px
+  letter-spacing 1.8px
+  padding 0 39px
+  text-transform uppercase
+  transition background-color 0.5s
+
+  &:hover
+    background-color #7e0000
+    transition background-color 0.5s
+
 @import 'partials/navbar'
 
 @import 'partials/footer'
+
+@-webkit-keyframes pulse
+  from
+    -webkit-transform scale3d(1, 1, 1)
+    transform scale3d(1, 1, 1)
+
+  50%
+    -webkit-transform scale3d(1.2, 1.2, 1.2)
+    transform scale3d(1.2, 1.2, 1.2)
+
+  to
+    -webkit-transform scale3d(1, 1, 1)
+    transform scale3d(1, 1, 1)
+
+@keyframes pulse
+  from
+    -webkit-transform scale3d(1, 1, 1)
+    transform scale3d(1, 1, 1)
+
+  50%
+    -webkit-transform scale3d(1.2, 1.2, 1.2)
+    transform scale3d(1.2, 1.2, 1.2)
+
+  to
+    -webkit-transform scale3d(1, 1, 1)
+    transform scale3d(1, 1, 1)
+
+.pulse
+  -webkit-animation-name pulse
+  animation-name pulse
+  animation-iteration-count 1
+  animation-duration 3s !important
+  //animation-delay 2s
+
+@-webkit-keyframes fadeInDown
+  from
+    opacity 0
+    -webkit-transform translate3d(0, -50%, 0)
+    transform translate3d(0, -50%, 0)
+
+  to
+    opacity 1
+    -webkit-transform translate3d(0, 0, 0)
+    transform translate3d(0, 0, 0)
+
+@keyframes fadeInDown
+  from
+    opacity 0
+    -webkit-transform translate3d(0, -25%, 0)
+    transform translate3d(0, -25%, 0)
+
+  to
+    opacity 1
+    -webkit-transform translate3d(0, 0, 0)
+    transform translate3d(0, 0, 0)
+
+.fadeInDown
+  -webkit-animation-name fadeInDown
+  animation-name fadeInDown
+  -webkit-animation-duration 3s
+  animation-duration 3s
+  animation-delay 0.1s
+
+@-webkit-keyframes fadeInDownBig
+  from
+    opacity 0
+    -webkit-transform translate3d(0, -2000px, 0)
+    transform translate3d(0, -2000px, 0)
+
+  to
+    opacity 1
+    -webkit-transform translate3d(0, 0, 0)
+    transform translate3d(0, 0, 0)
+
+.animated
+  -webkit-animation-duration 2.5s
+  animation-duration 2.5s
+  -webkit-animation-fill-mode both
+  animation-fill-mode both
+
+.animated.infinite
+  -webkit-animation-iteration-count infinite
+  animation-iteration-count infinite
+
+.animated.flip
+  -webkit-backface-visibility visible
+  backface-visibility visible
+  -webkit-animation-name flip
+  animation-name flip
