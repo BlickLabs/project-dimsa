@@ -1,26 +1,86 @@
 .site-navbar
-  background-color black
-  display flex
   align-items center
-  height 78px
+  background-color $dGrayBackg
+  display flex
+  height 153px
+  justify-content space-between
   left 0
+  padding 0 130px
   position fixed
   top 0
+  transition .3s background ease
   width 100%
   z-index 12
-  padding 0 40px 0 20px
-  transition .3s background ease
+
+  &-logo
+    height 89px
+    width 174px
 
 .navbar-option-link
-  color #fff
-  font-size remify(12)
-  text-transform uppercase
-  letter-spacing 1.4px
+  color $dGrayNav
   cursor pointer
-  margin-right 30px
+  font-size remify(13px)
+  letter-spacing 1.9px
+  margin-left 30px
+  text-transform uppercase
+  transition all 0.4s
+
+  &.active-link,
+  &:hover
+    color #6e6e6e
+    transition all 0.6s
+
+  &:hover
+    .link-decorator
+      opacity 1
+      transition all 0.4s
+
+  &-container
+    display flex
+    flex-direction row
+
+.link-decorator
+  background-color $dGraySelect
+  height 3px
+  margin-top 6px
+  opacity 0
+  width 16px
+
+.decorator-active
+  opacity 1
 
 .hamburger-menu-container
   display none
+
+.navbar-hamburguer-visibility
+  position absolute
+
+/*dropdown*/
+
+.dropdown
+    position relative
+    display inline-block
+
+.dropdown-content
+  display none
+  position absolute
+  background-color #f9f9f9
+  min-width 160px
+  overflow auto
+  box-shadow 0px 8px 16px 0px rgba(0,0,0,0.2)
+  z-index 1
+
+.dropdown-content a
+  color black
+  padding 12px 16px
+  text-decoration none
+  display block
+
+.dropdown a:hover
+  background-color #f1f1f1
+
+.show
+  display block
 
 @media screen and (max-width: 876px)
   .site-navbar
@@ -37,6 +97,9 @@
     display block
     text-align left
     flex-basis 100%
+
+  .navbar-hamburguer-visibility
+    position initial
       
   .navbar-hamburguer
     width 33px
