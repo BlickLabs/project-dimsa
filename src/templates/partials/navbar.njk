@@ -1,24 +1,45 @@
-<nav class="site-navbar">
+<nav class="site-navbar helvetica-neue-bold">
   <div>
     <a href="index.html">
-      <img src="" alt="Logo">
+      <img class="site-navbar-logo" src="img/logos/dimsa-grey.png" alt="Logo">
     </a>
   </div>
   <div class="navbar-option-link-container">
-    <a href="index.html" class="navbar-option-link">
+    <a href="index.html" class="navbar-option-link {% if section == 'index' %} active-link {% endif %}">
       <span>Inicio</span>
+      <div class="link-decorator {% if section == 'index' %} decorator-active {% endif %}"></div>
     </a>
-    <a href="nosotros.html" class="navbar-option-link">
+    <a href="nosotros.html" class="navbar-option-link {% if section == 'nosotros' %} active-link {% endif %}">
       <span>Nosotros</span>
+      <div class="link-decorator {% if section == 'nosotros' %} decorator-active {% endif %}"></div>
     </a>
-    <a href="servicios.html" class="navbar-option-link">
+    <a href="servicios.html" class="navbar-option-link {% if section == 'servicios' %} active-link {% endif %}">
       <span>Servicios</span>
+      <div class="link-decorator {% if section == 'servicios' %} decorator-active {% endif %}"></div>
     </a>
-    <a href="categorias.html" class="navbar-option-link">
+       
+    <!--
+    <a href="categorias.html" class="navbar-option-link {% if section == 'categorias' %} active-link {% endif %}">
       <span>Categorías</span>
+      <div class="link-decorator {% if section == 'categorias' %} decorator-active {% endif %}"></div>
     </a>
-    <a href="contacto.html" class="navbar-option-link">
+    -->
+
+    <div class="dropdown navbar-option-link {% if section == 'categorias' %} active-link {% endif %}">
+      <span onclick="myFunction()" class="dropbtn">Categorías</span>
+      <div class="link-decorator {% if section == 'categorias' %} decorator-active {% endif %}"></div>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="categorias.html">Reservas</a>
+        <a href="">Planes</a>
+        <a href="">Pagos</a>
+        <a href="">Reservación y uso de espacios</a>
+        <a href="">Pruebas</a>
+      </div>
+    </div>
+
+    <a href="contacto.html" class="navbar-option-link {% if section == 'contacto' %} active-link {% endif %}">
       <span>Contacto</span>
+      <div class="link-decorator {% if section == 'contacto' %} decorator-active {% endif %}"></div>
     </a>
   </div>
   <div data-attribute="" class="navbar-hamburguer-visibility"  id="hamburgerMenu">
