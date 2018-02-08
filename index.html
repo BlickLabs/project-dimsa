@@ -34,16 +34,11 @@
       <span>Servicios</span>
       <div class="link-decorator "></div>
     </a>
-       
-    <!--
-    <a href="categorias.html" class="navbar-option-link ">
-      <span>Categorías</span>
-      <div class="link-decorator "></div>
-    </a>
-    -->
-
     <div class="dropdown navbar-option-link ">
-      <span onclick="myFunction()" class="dropbtn">Categorías</span>
+      <span onclick="myFunction()" class="dropbtn">Productos</span>
+      <div class="down-triangle-container">
+        <img class="down-triangle" src="img/icons/down-triangle.png">
+      </div>
       <div class="link-decorator "></div>
       <div id="myDropdown" class="dropdown-content">
         <a href="categorias.html">Reservas</a>
@@ -72,7 +67,7 @@
     <div class="hamburger-menu-header" data-attribute="">
       <div class="" data-attribute="">
         <a href="" data-attribute="">
-          <img class="hamburger-logo" src="" data-attribute="" alt="logo hamburger">
+          <img class="hamburger-logo" src="img/logos/dimsa-white.png" data-attribute="" alt="logo hamburger">
         </a>
       </div>
       <div class="hamburger-close-container" id="hideHamburger">
@@ -81,28 +76,43 @@
     </div>
     <div class="hamburger-menu-body" data-attribute="">
       <a data-attribute="" href="index.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Inicio</span>
+          <div class="link-decorator  decorator-active "></div>
         </div>
       </a>
       <a data-attribute="" href="nosotros.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Nosotros</span>
+          <div class="link-decorator "></div>
         </div>
       </a>
       <a data-attribute="" href="servicios.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Servicios</span>
+          <div class="link-decorator "></div>
         </div>
       </a>
-      <a data-attribute="" href="categorias.html" class="hamburger-option-link">
-        <div>
-          <span class="hamburger-text">Categorías</span>
+      <div href="productos.html" class="hamburger-option-link">
+        <div data-attribute="" class="hamburger-text-container hamburger-dropdown-container">
+          <span data-attribute="" onclick="hamburgerDropDown()" class="dropbtn">Productos</span>
+          <div class="down-triangle-container">
+            <img class="down-triangle" src="img/icons/down-triangle-white.png">
+          </div>
+          <div class="link-decorator "></div>
+          <div id="hambugerDropdown" class="dropdown-content">
+            <a href="categorias.html">Reservas</a>
+            <a href="">Planes</a>
+            <a href="">Pagos</a>
+            <a href="">Reservación y uso de espacios</a>
+            <a href="">Pruebas</a>
+          </div>
         </div>
-      </a>
+      </div>
       <a data-attribute="" href="contacto.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Contacto</span>
+          <div class="link-decorator "></div>
         </div>
       </a>
     </div>
@@ -192,7 +202,7 @@
           <div>
             <img class="home-products-icon metallic-i" src="img/icons/icon-metallic.png">
           </div>
-          <span class="home-products-category">metálicos</span>
+          <span class="home-products-category">metalizados</span>
         </div>
       </div>
     </div>
@@ -212,7 +222,8 @@
     <div class="home-iso">
       <img class="home-iso-logo animated" src="img/logos/iso-9001.png">
       <div class="home-iso-description-container">
-        <span class="home-iso-description helvetica-neue-bold">contamos<br>con certificación<br>iso9001</span>
+        <span class="home-iso-description helvetica-neue-bold show-hide">contamos<br>con certificación<br>iso9001</span>
+        <span class="home-iso-description helvetica-neue-bold hide-show">contamos con certificación iso9001</span>
       </div>
     </div>
 
@@ -240,16 +251,20 @@
     </div>
 
     <div class="home-footer">
-      <span class="home-footer-text helvetica-neue-bold">clientes principales</span>
-      <div class="home-footer-separator"></div>
-      <div>
-        <img class="home-footer-logo-scribe" src="img/logos/scribe.png">
+      <div class="home-footer-text-container">
+        <span class="home-footer-text helvetica-neue-bold">clientes principales</span>
+        <div class="home-footer-separator"></div>
       </div>
-      <div>
-        <img class="home-footer-logo-peosa" src="img/logos/grupo-peosa.png">
-      </div>
-      <div>
-        <img class="home-footer-logo-pappel" src="img/logos/bio-pappel.png">
+      <div class="home-footer-clients-container">
+        <div>
+          <img class="home-footer-logo-scribe" src="img/logos/scribe.png">
+        </div>
+        <div>
+          <img class="home-footer-logo-peosa" src="img/logos/grupo-peosa.png">
+        </div>
+        <div>
+          <img class="home-footer-logo-pappel" src="img/logos/bio-pappel.png">
+        </div>
       </div>
     </div>
   </div>
@@ -261,24 +276,38 @@
       <div class="line-animated"></div>
     </div>
     <a href="#top">
-      <span class="home-view-more-text">subir</span>
+      <span class="home-view-more-text white-text">subir</span>
     </a>
   </div>
-  <div class="site-footer-row-section helvetica-neue-medium">
-    <div>
+  <div class=" show-hide">
+    <div class="site-footer-row-section helvetica-neue-medium">
+      <div>
+        <a href="index.html">
+          <img class="site-footer-logo" src="img/logos/dimsa-white.png">
+        </a>
+      </div>
+      <div class="site-footer-row-descript">
+        <span>Horario de atención<br>De 9:00 am a 6:00 pm</span>
+        <span>Lebrija 151, Col.<br>Cerro de la estrella CP 09860<br>Del. Iztapalapa</span>
+        <span>Tel: 542. 652. 08<br> <a href="mailto: informes@dim-sa.com.mx">informes@dim-sa.com.mx</a><br><a href="https://www.facebook.com/DIMSA-176436996437469/" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer-row-section hide-show helvetica-neue-medium">
+    <div class="site-footer-row-descript">
       <a href="index.html">
         <img class="site-footer-logo" src="img/logos/dimsa-white.png">
       </a>
+      <span>Horario de atención<br>De 9:00 am a 6:00 pm</span>
     </div>
     <div class="site-footer-row-descript">
-      <span>Horario de atención<br>De 9:00 am a 6:00 pm</span>
       <span>Lebrija 151, Col.<br>Cerro de la estrella CP 09860<br>Del. Iztapalapa</span>
       <span>Tel: 542. 652. 08<br> <a href="mailto: informes@dim-sa.com.mx">informes@dim-sa.com.mx</a><br><a href="https://www.facebook.com/DIMSA-176436996437469/" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></span>
     </div>
   </div>
   <div class="site-footer-divider"></div>
   <div class="site-footer-row-section helvetica-neue-bold">
-    <div>
+    <div class="site-footer-cr-container">
       <span>© 2018, Dimsa</span>
     </div>
     <div class="site-footer-row-descript">
@@ -288,7 +317,7 @@
       <a class="site-footer-link " href="servicios.html">
         <span>Servicios</span>
       </a>
-      <a class="site-footer-link " href="categorias.html">
+      <a class="site-footer-link " href="productos.html">
         <span>Productos</span>
       </a>
       <a class="site-footer-link " href="contacto.html">
