@@ -65,3 +65,46 @@
       color $dGraySelect
       text-decoration underline
       transition all 0.4s
+
+@media screen and (max-width 786px)
+  .site-footer
+    padding 0 30px
+
+    &-go-top
+      right -47px
+      top -15px
+
+    &-logo
+      height 46px
+      width 90px
+
+    &-row-descript
+      justify-content space-between
+      margin-bottom 20px
+
+      & span:nth-child(2)
+        margin 0
+
+    &-divider
+      margin 15px 0 30px 0
+
+    &-row-section
+      align-items center
+      flex-direction column
+
+    &-cr-container
+      margin-bottom 20px
+
+    &-link
+      margin-left 10px
+
+  .home-view-more-text.white-text
+    color $dWhite
+
+@media screen and (min-width 787px) and (max-width 940px)
+  .site-footer
+    padding 0 50px
+
+@media screen and (min-width 420px) and (max-width 786px)
+  .site-footer
+    padding 0 15%
