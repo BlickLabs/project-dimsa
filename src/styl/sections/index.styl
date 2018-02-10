@@ -226,6 +226,11 @@
     height 146px
     justify-content center
 
+    &-text-container,
+    &-clients-container
+      display flex
+      flex-direction row
+
     &-separator
       background-color $dWhite
       height 26px
@@ -236,6 +241,9 @@
       color $dWhite
       font-size $font13
       text-transform uppercase
+
+      &-container
+        align-items center
 
     &-logo
 
@@ -333,3 +341,143 @@
   .owl-dots.disabled
     display block
 
+@media screen and (max-width 786px)
+  .cover-carousel
+    padding-right 0
+
+  .home
+    &-cover
+      height 360px
+      padding 0 15px 0 45px
+
+      &-title
+        font-size remify(30px)
+
+      &-description
+        line-height 18px
+
+    &-products
+      padding 100px 0 140px 0
+
+      &-info
+        flex-direction column
+        padding 0 45px
+
+    &-view-more-text
+      &-container
+        bottom -2px
+        left -45px
+        right initial
+        z-index 3
+
+    &-why-dimsa
+      height auto
+      margin-top 0
+      padding 30px 15px 30px 45px
+
+      &-title
+        font-size remify(17px)
+
+      &-description
+        font-size remify(16px)
+        line-height 20px
+
+    &-iso
+      align-items center
+      flex-direction column
+      padding 50px 0 0px 0
+
+      &-logo
+        height 102px
+        width 130px
+
+      &-description
+        font-size remify(30px)
+        line-height 30px
+
+        &-container
+          margin-left 0
+          padding 20px 30px 0 30px
+          text-align center
+
+    &-design
+      flex-direction column
+      margin 60px 0 0 0
+      padding 0 20px 0 20px
+
+      &-line
+        left initial
+        right 0
+        top 210px
+
+      &-right-container
+        margin-left 0
+
+      &-img
+        height 175px
+        width 270px
+
+        &-container
+          margin 30px auto
+          position initial
+
+    &-footer
+      flex-direction column
+
+      &-text-container
+        align-items center
+        flex-direction column
+
+      &-separator
+        height 3px
+        margin 20px 0
+        width 26px
+
+      &-logo
+        &-scribe
+          height 22px
+
+        &-peosa
+          height 21px
+          margin 0 25px
+
+        &-pappel
+          height 17px
+
+  .products-owl-controls
+    bottom -106px
+    left 0
+    padding-right 30px
+    width 300px
+
+  .owl-controls
+    padding-right 30px
+    width 300px
+
+  .cover-carousel,
+  .products-carousel
+    .owl-controls,
+    .products-owl-controls
+      .owl-nav
+        padding-left 30px
+
+@media screen and (min-width 787px) and (max-width 1100px)
+  .home-design-img
+    height auto
+    width 100%
+
+    &-container
+      bottom -80px
+      left -180px
+      margin-right 74%
+
+@media screen and (min-width 787px) and (max-width 900px)
+  .home-footer
+
+    &-separator,
+    &-logo-peosa
+      margin 0 65px
+
+@media screen and (min-width 787px) and (max-width 830px)
+  .products-owl-controls
+    left 210px
