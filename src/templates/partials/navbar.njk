@@ -1,24 +1,40 @@
-<nav class="site-navbar">
+<nav class="site-navbar helvetica-neue-bold">
   <div>
     <a href="index.html">
-      <img src="" alt="Logo">
+      <img class="site-navbar-logo" src="img/logos/dimsa-grey.png" alt="Logo">
     </a>
   </div>
   <div class="navbar-option-link-container">
-    <a href="index.html" class="navbar-option-link">
+    <a href="index.html" class="navbar-option-link {% if section == 'index' %} active-link {% endif %}">
       <span>Inicio</span>
+      <div class="link-decorator {% if section == 'index' %} decorator-active {% endif %}"></div>
     </a>
-    <a href="nosotros.html" class="navbar-option-link">
+    <a href="nosotros.html" class="navbar-option-link {% if section == 'nosotros' %} active-link {% endif %}">
       <span>Nosotros</span>
+      <div class="link-decorator {% if section == 'nosotros' %} decorator-active {% endif %}"></div>
     </a>
-    <a href="servicios.html" class="navbar-option-link">
+    <a href="servicios.html" class="navbar-option-link {% if section == 'servicios' %} active-link {% endif %}">
       <span>Servicios</span>
+      <div class="link-decorator {% if section == 'servicios' %} decorator-active {% endif %}"></div>
     </a>
-    <a href="categorias.html" class="navbar-option-link">
-      <span>Categorías</span>
-    </a>
-    <a href="contacto.html" class="navbar-option-link">
+    <div class="dropdown navbar-option-link {% if section == 'categorias' %} active-link {% endif %}">
+      <span onclick="myFunction()" class="dropbtn">Productos</span>
+      <div class="down-triangle-container">
+        <img class="down-triangle" src="img/icons/down-triangle.png">
+      </div>
+      <div class="link-decorator {% if section == 'categorias' %} decorator-active {% endif %}"></div>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="categorias.html">Reservas</a>
+        <a href="">Planes</a>
+        <a href="">Pagos</a>
+        <a href="">Reservación y uso de espacios</a>
+        <a href="">Pruebas</a>
+      </div>
+    </div>
+
+    <a href="contacto.html" class="navbar-option-link {% if section == 'contacto' %} active-link {% endif %}">
       <span>Contacto</span>
+      <div class="link-decorator {% if section == 'contacto' %} decorator-active {% endif %}"></div>
     </a>
   </div>
   <div data-attribute="" class="navbar-hamburguer-visibility"  id="hamburgerMenu">
@@ -34,7 +50,7 @@
     <div class="hamburger-menu-header" data-attribute="">
       <div class="" data-attribute="">
         <a href="" data-attribute="">
-          <img class="hamburger-logo" src="" data-attribute="" alt="logo hamburger">
+          <img class="hamburger-logo" src="img/logos/dimsa-white.png" data-attribute="" alt="logo hamburger">
         </a>
       </div>
       <div class="hamburger-close-container" id="hideHamburger">
@@ -43,28 +59,43 @@
     </div>
     <div class="hamburger-menu-body" data-attribute="">
       <a data-attribute="" href="index.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Inicio</span>
+          <div class="link-decorator {% if section == 'index' %} decorator-active {% endif %}"></div>
         </div>
       </a>
       <a data-attribute="" href="nosotros.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Nosotros</span>
+          <div class="link-decorator {% if section == 'nosotros' %} decorator-active {% endif %}"></div>
         </div>
       </a>
       <a data-attribute="" href="servicios.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Servicios</span>
+          <div class="link-decorator {% if section == 'servicios' %} decorator-active {% endif %}"></div>
         </div>
       </a>
-      <a data-attribute="" href="categorias.html" class="hamburger-option-link">
-        <div>
-          <span class="hamburger-text">Categorías</span>
+      <div href="productos.html" class="hamburger-option-link">
+        <div data-attribute="" class="hamburger-text-container hamburger-dropdown-container">
+          <span data-attribute="" onclick="hamburgerDropDown()" class="dropbtn">Productos</span>
+          <div class="down-triangle-container">
+            <img class="down-triangle" src="img/icons/down-triangle-white.png">
+          </div>
+          <div class="link-decorator {% if section == 'categorias' %} decorator-active {% endif %}"></div>
+          <div id="hambugerDropdown" class="dropdown-content">
+            <a href="categorias.html">Reservas</a>
+            <a href="">Planes</a>
+            <a href="">Pagos</a>
+            <a href="">Reservación y uso de espacios</a>
+            <a href="">Pruebas</a>
+          </div>
         </div>
-      </a>
+      </div>
       <a data-attribute="" href="contacto.html" class="hamburger-option-link">
-        <div>
+        <div class="hamburger-text-container">
           <span class="hamburger-text">Contacto</span>
+          <div class="link-decorator {% if section == 'contacto' %} decorator-active {% endif %}"></div>
         </div>
       </a>
     </div>

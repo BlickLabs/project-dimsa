@@ -1,6 +1,110 @@
 .site-footer
-  background-color black
+  background-image url("../img/backgrounds/footer-dimsa.jpg")
+  background-position center
+  background-repeat no-repeat
+  background-size cover
   bottom 0
-  height 65px
+  color $dWhite
+  display flex
+  flex-direction column
+  font-size $font12
+  height 372px
+  justify-content center
+  padding 0 130px
   position absolute
   width 100%
+
+  &-go-top
+    align-items center
+    display flex
+    flex-direction row
+    position absolute
+    right 0
+    top 30px
+    transform rotate(90deg)
+
+  &
+    .line-animated-container
+      margin-right 15px
+
+  &-logo
+    height 69px
+    width 134px
+
+  &-divider
+    background-color $dWhite
+    height 2px
+    margin 50px 0
+    width 100%
+
+  &-row-section
+    display flex
+    justify-content space-between
+
+  &-row-descript
+    display flex
+    flex-direction row
+
+    & > a,
+    & > span a
+      color $dWhite
+
+    & span
+      line-height 23px
+      text-align right
+
+    & span:nth-child(2)
+      margin 0 35px
+
+  &-link
+    margin-left 40px
+    transition all 0.6s
+
+    &.footer-active,
+    &:hover
+      color $dGraySelect
+      text-decoration underline
+      transition all 0.4s
+
+@media screen and (max-width 786px)
+  .site-footer
+    padding 0 30px
+
+    &-go-top
+      right -47px
+      top -15px
+
+    &-logo
+      height 46px
+      width 90px
+
+    &-row-descript
+      justify-content space-between
+      margin-bottom 20px
+
+      & span:nth-child(2)
+        margin 0
+
+    &-divider
+      margin 15px 0 30px 0
+
+    &-row-section
+      align-items center
+      flex-direction column
+
+    &-cr-container
+      margin-bottom 20px
+
+    &-link
+      margin-left 10px
+
+  .home-view-more-text.white-text
+    color $dWhite
+
+@media screen and (min-width 787px) and (max-width 940px)
+  .site-footer
+    padding 0 50px
+
+@media screen and (min-width 420px) and (max-width 786px)
+  .site-footer
+    padding 0 15%
