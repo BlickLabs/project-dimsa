@@ -61,6 +61,27 @@ switch (window.location.pathname) {
     });
     break;
 
+    case '/project-dimsa/contacto.html':
+  case '/contacto.html':
+    var scrollContact = {
+        containerScroll: '.home-container',
+        elContact: '.contact-separator',
+        animationContact: 'fadeInDown'
+      };
+ 
+    window.addEventListener('scroll', function(){
+      var containerHeigh = window.innerHeight;
+      var positionContact = document.querySelector(scrollContact.elContact).getBoundingClientRect().top;
+      var elementContact = document.querySelector(scrollContact.elContact);
+
+      if (positionContact < containerHeigh) {
+        elementContact.classList.add(scrollContact.animationContact);
+      } else {
+        elementContact.classList.remove(scrollContact.animationContact);
+      }
+    });
+    break;
+
   default:
     break;
 }
