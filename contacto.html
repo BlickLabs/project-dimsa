@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-  <title>Contacto</title>
+<title>Contacto</title>
 
     
     <link rel="stylesheet" href="css/project-dimsa.libs.css">
@@ -41,7 +41,8 @@
       </div>
       <div class="link-decorator "></div>
       <div id="myDropdown" class="dropdown-content">
-        <a href="categorias.html">Reservas</a>
+        <a href="productos.html" class="">Ver todos</a>
+        <a href="">Reservas</a>
         <a href="">Planes</a>
         <a href="">Pagos</a>
         <a href="">Reservación y uso de espacios</a>
@@ -101,7 +102,8 @@
           </div>
           <div class="link-decorator "></div>
           <div id="hambugerDropdown" class="dropdown-content">
-            <a href="categorias.html">Reservas</a>
+            <a href="productos.html">Ver todos</a>
+            <a href="">Reservas</a>
             <a href="">Planes</a>
             <a href="">Pagos</a>
             <a href="">Reservación y uso de espacios</a>
@@ -121,9 +123,85 @@
 
       <main>
         
-  <div>
-    <h1>Contacto</h1>
+<div>
+  <div class="contact-content">
+    <div class="contact-form-section helvetica-neue-medium">
+      <div class="contact-title-container">
+        <h1 class="contact-title helvetica-neue-bold">Contáctanos</h1>
+        <div class="red-decorator"></div>
+      </div>
+      <div class="contact-description-container">
+        <span class="contact-description">Déjanos tus datos y nos pondremos en contacto.</span>
+      </div>
+      <form name="contact-form">
+        <div class="contact-form-contents">
+          <label class="contact-form-labels">*Nombre</label>
+          <input class="contact-form-inputs" type="text" name="name" required>
+        </div>
+        <div class="contact-form-contents">
+          <label class="contact-form-labels">*Correo electrónico</label>
+          <input class="contact-form-inputs" type="text" name="email" required>
+        </div>
+        <div class="contact-form-contents">
+          <label class="contact-form-labels">Empresa</label>
+          <input class="contact-form-inputs"  type="text" name="company">
+        </div>
+        <div class="contact-form-contents">
+          <label class="contact-form-labels">*Teléfono</label>
+          <input class="contact-form-inputs" type="text" name="phone" required>
+        </div>
+        <div class="contact-form-contents">
+          <label class="contact-form-labels">Cuéntanos tu necesidad</label>
+          <textarea  class="contact-form-textarea" name="comments" placeholder="Escribe aquí..."></textarea>
+        </div>
+        <button class="dimsa-button" type="submit">enviar</button>
+      </form>
+    </div>
+    <div class="contact-panel">
+      <div class="contact-panel-title-container">
+        <h1 class="contact-panel-title">Encuéntranos</h1>
+      </div>
+      <a href="https://goo.gl/maps/RoPX4roCkkG2" target="_blank">
+        <div class="contact-panel-contents">
+          <div class="contact-panel-icon-container">
+            <img class="contact-panel-icon" src="img/icons/icon-location.png">
+          </div>
+          <span class="contact-panel-description">Calle Lebrija No 151<br>Col. Cerro de la Estrella<br>Del. Iztapalapa, CDMX<br>c.p. 09860</span>
+        </div>
+      </a>
+      <div class="contact-panel-contents">
+        <div class="contact-panel-icon-container">
+          <img class="contact-panel-icon" src="img/icons/icon-phone.png">
+        </div>
+        <span class="contact-panel-description">54. 26. 52. 08</span>
+      </div>
+      <div class="contact-panel-contents">
+        <div class="contact-panel-icon-container">
+          <img class="contact-panel-icon" src="img/icons/icon-mail.png">
+        </div>
+        <span class="contact-panel-description">informes@dim-sa.com.mx</span>
+      </div>
+      <div class="contact-panel-contents">
+        <div class="contact-panel-icon-container">
+          <img class="contact-panel-icon" src="img/icons/icon-clock.png">
+        </div>
+        <span class="contact-panel-description">Horario de atención<br>De 9:00am a 6:00pm</span>
+      </div>
+      <a href="https://www.facebook.com/DIMSA-176436996437469/" target="_blank">
+        <div class="contact-panel-contents">
+          <div class="contact-panel-icon-container">
+            <img class="contact-panel-icon fb-icon" src="img/icons/icon-fb.png">
+          </div>
+          <span class="contact-panel-description">Facebook DIMSA</span>
+        </div>
+      </a>
+    </div>
   </div>
+  <div class="contact-separator-container">
+    <div class="contact-separator-background"></div>
+    <div class="contact-separator animation"></div>
+  </div>
+</div>
 
       </main>
       <footer class="site-footer">
