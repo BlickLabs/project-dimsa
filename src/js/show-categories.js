@@ -12,23 +12,3 @@ $(document).ready(function() {
 
   });
 });
-
-window.addEventListener('scroll', function (){
-  var windowHeight = window.innerHeight;
-  var homeIsoPos = document.getElementsByClassName('home-iso-logo')[0].getBoundingClientRect().top;
-  var homeIso = document.querySelector('.home-iso-logo');
-
-  var homeDesignPos = document.getElementsByClassName('home-design-img-container')[0].getBoundingClientRect().top;
-  var homeDesign = document.querySelector('.home-design-img-container');
-  if (homeIsoPos < windowHeight) {
-    homeIso.classList.add('pulse');
-  } else {
-    homeIso.classList.remove('pulse');
-  }
-
-  if (homeDesignPos < windowHeight) {
-    homeDesign.classList.add('fadeInDown');
-  } else {
-    homeDesign.classList.remove('fadeInDown');
-  } 
-});
