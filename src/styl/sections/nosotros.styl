@@ -1,0 +1,234 @@
+.about
+  margin 117px 0 123px 0
+  &-materials
+    display flex
+    flex-direction row
+    margin-bottom 160px
+    padding 0 0 0 125px
+    position relative
+
+    &-title
+      color $dGraySelect
+      font-size $font45
+      letter-spacing 0.3px
+
+      &-container
+        max-width 520px
+
+    &-info
+      margin-right 165px
+
+    &-img
+      height 550px
+      width 434px
+      z-index 1
+
+      &-container
+        position absolute
+        right 78px
+        top 75px
+
+    &-background
+      background-color $dGrayBackg
+      height 699px
+      width 422px
+
+      &-container
+        margin-top -65px
+        position relative
+
+    &-line
+      bottom -45px
+      left 0
+      position absolute
+      transform rotate(-90deg)
+
+  &-commitment
+    display flex
+    flex-direction row
+    margin 0 86px 0 136px
+    position relative
+
+    &-background
+      background-color $dGrayBackg
+      bottom 60px
+      left 0
+      position absolute
+      right -86px
+      top -50px
+      z-index -1
+
+    &-info
+      align-items flex-end
+      display flex
+      flex-direction column
+      margin 0 141px 0 0
+
+    &-text
+      text-align right
+
+      &-container
+        margin-top 40px
+
+    &-img
+      height 457px
+      width 434px
+
+  &-products
+    display flex
+    flex-direction row
+    margin-bottom 200px
+
+    &-info
+      margin 0 109px 0 70px
+
+    &-button-container
+      margin-top 60px
+
+    &-img
+      background-postion center
+      background-repeat no-repeat
+      background-size cover
+      height 500px
+      width 621px
+
+.carousel-img
+  &-1
+    background-image url("../img/about-us/about-us-carousel-1.jpg")
+  &-2
+    background-image url("../img/about-us/about-us-carousel-2.jpg")
+  &-3
+    background-image url("../img/about-us/about-us-carousel-3.jpg")
+
+.about-us-carousel
+  width 597px
+
+.about-us-carousel
+  .owl-controls,
+  .about-controls
+    .owl-nav
+      .owl-prev,
+      .owl-next
+        background-color $dRedButton
+
+.about-us-carousel
+  .about-controls
+    .owl-nav
+      margin-top 0
+      padding-left 130px
+
+  &
+    .owl-dots
+      .owl-dot
+        span
+          background-color #d6d6d6
+          height 2px
+          width 24px
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+  background-color $dGraySelect
+
+.about-controls
+  align-items center
+  background-color $dRedButton
+  bottom -106px
+  display flex
+  flex-direction row-reverse
+  height 106px
+  padding-right 50px
+  position absolute
+  right 0
+  width 540px
+
+.nav-arrows
+  height 11px
+  width 18px
+
+.about-us-carousel
+  .owl-nav.disabled,
+  .owl-dots.disabled
+    display block
+
+@media screen and (max-width 786px)
+  .about
+    margin 40px 0 0 0
+
+    &-materials
+      flex-direction column
+      margin-bottom 100px
+      padding-left 30px
+
+      &-title
+        font-size remify(35px)
+
+      &-info
+        margin-right 40px
+
+      &-img
+        height auto
+        width 230px
+
+        &-container
+          left 30px
+          padding-right 0
+          right initial
+          top 40px
+
+      &-background
+        background-color darkgrey
+        height 300px
+        width 200px
+
+        &-container
+          margin-top 30px
+
+      &-line
+        bottom initial
+        left initial
+        right 0
+        top 155px
+
+    &-products
+      flex-direction column
+      margin-bottom 50px
+
+      &-img
+        height 320px
+        width 300px
+
+      &-info
+        margin 100px 40px 20px 40px
+
+      &-button-container
+        margin-top 30px
+
+    &-commitment
+      flex-direction column
+      margin 0 35px
+
+      &-info
+        margin-right 0
+
+      &-text
+        &-container
+          margin-top 15px
+
+      &-img
+        height 263px
+        margin 30px 0
+        width 250px
+
+  .about-us-carousel
+    height 320px
+    width 300px
+
+  .about-controls
+    bottom -70px
+    height 70px
+    padding-right 10px
+    width 260px
+
+  .about-us-carousel
+    .about-controls
+      .owl-nav
+        padding-left 30px
