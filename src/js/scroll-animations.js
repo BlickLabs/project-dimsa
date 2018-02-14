@@ -1,65 +1,7 @@
-/*window.addEventListener('scroll', function (){
-  var windowHeight = window.innerHeight;
-  var homeIsoPos = document.getElementsByClassName('home-iso-logo')[0].getBoundingClientRect().top;
-  var homeIso = document.querySelector('.home-iso-logo');
-
-  var homeDesignPos = document.getElementsByClassName('home-design-img-container')[0].getBoundingClientRect().top;
-  var homeDesign = document.querySelector('.home-design-img-container');
-  if (homeIsoPos < windowHeight) {
-    homeIso.classList.add('pulse');
-  } else {
-    homeIso.classList.remove('pulse');
-  }
-
-  if (homeDesignPos < windowHeight) {
-    homeDesign.classList.add('fadeInDown');
-  } else {
-    homeDesign.classList.remove('fadeInDown');
-  } 
-});*/
-
-/*var elemsScroll = [
-  {
-    containerScroll: '.home-container',
-    element: '.home-iso-logo',
-    animation: 'pulse'
-  }
-];*/
-/*
-function scrollEventElem (elemsScroll) {
-  console.log("lowow");
-  var containerHeigh = window.innerHeight;
-  var positionElem = document.querySelector(elemsScroll.element).getBoundingClientRect().top;
-  var elem = document.querySelector(elemsScroll.element);
-
-  if (positionElem < containerHeigh) {
-    elem.classList.add(elemsScroll.animation);
-  } else {
-    elem.classList.remove(elemsScroll.animation);
-  }
-}*/
-
 switch (window.location.pathname) {
   case '/index.html':
   case '/':
   case 'project-dimsa/index.html':
-    /*var elemsScroll = {
-        containerScroll: '.home-container',
-        element: '.home-iso-logo',
-        animation: 'pulse'
-      };
- 
-    window.addEventListener('scroll', function(){
-      var containerHeigh = window.innerHeight;
-      var positionElem = document.querySelector(elemsScroll.element).getBoundingClientRect().top;
-      var elem = document.querySelector(elemsScroll.element);
-
-      if (positionElem < containerHeigh) {
-        elem.classList.add(elemsScroll.animation);
-      } else {
-        elem.classList.remove(elemsScroll.animation);
-      }
-    });*/
     var elemsScroll = {
         containerScroll: '.home-container',
         elLogo: '.home-iso-logo',
@@ -120,13 +62,5 @@ switch (window.location.pathname) {
     break;
 
   default:
-    //No funciona
     break;
 }
-
-/*for (var i = 0; i < elemsScroll.length; i++) {
-  var container = document.querySelectorAll(elemsScroll[i].containerScroll);
-  if (container.length) {
-    container[0].addEventListener('scroll', scrollEventElem(elemsScroll[i]));
-  }
-}*/
