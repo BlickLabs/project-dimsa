@@ -5,78 +5,52 @@
 {% endblock %}
 
 {% block content %}
-  <div class="site-container">
-    <h1 class="site-title">Categorías</h1>
-    <div class="show-option-container">
-      <ul class="select-option-container">
-        <li class="select-option active" data-section="reservations">
-          <span>Reservas</span>
-        </li>
-        <li class="select-option" data-section="memberships">
-          <span>Planes</span>
-        </li>
-        <li class="select-option" data-section="paids">
-          <span>Pagos</span>
-        </li>
-        <li class="select-option" data-section="spaceUses">
-          <span>Reservación y uso de espacios</span>
-        </li>
-        <li class="select-option" data-section="tests">
-          <span>Pruebas</span>
-        </li>
-      </ul>
-
-      <div class="info-selected-option-container">
-        <div class="reservations info-selected-option active">
-          <h1>Reservas</h1>
-          <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-        <div class="memberships info-selected-option">
-          <h1>Planes</h1>
-          <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-        <div class="paids info-selected-option">
-          <h1>Pagos</h1>
-          <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-        <div class="spaceUses info-selected-option">
-          <h1>Reservación y uso de espacios</h1>
-          <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-        <div class="tests info-selected-option">
-          <h1>Pruebas</h1>
-          <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="products-container">
+  <div>
+    <h1 class="products-title helvetica-neue-bold">Productos</h1>
+    <div class="red-decorator"></div>
   </div>
+  <div class="products-cards-container helvetica-neue-bold">
+    <a class="products-card-anchor" href="papeles.html">
+      <div class="home-products-card papper products-modifier">
+        <div>
+          <img class="home-products-icon papper-i" src="img/icons/icon-papper.png">
+        </div>
+        <span class="home-products-category">papeles y películas<br>laminadas</span>
+      </div>
+    </a>
+    <a class="products-card-anchor" href="empaques.html">
+      <div class="home-products-card packing products-modifier">
+        <div>
+          <img class="home-products-icon packing-i" src="img/icons/icon-packing.png">
+        </div>
+        <span class="home-products-category">empaques<br>alimenticios</span>
+      </div>
+    </a>
+    <a class="products-card-anchor" href="especialidades.html">
+      <div class="home-products-card specialties products-modifier">
+        <div>
+          <img class="home-products-icon specialties-i" src="img/icons/icon-specialties.png">
+        </div>
+        <span class="home-products-category">especialidades</span>
+      </div>
+    </a>
+    <a class="products-card-anchor" href="metalizados.html">
+      <div class="home-products-card metallic products-modifier">
+        <div>
+          <img class="home-products-icon metallic-i" src="img/icons/icon-metallic.png">
+        </div>
+        <span class="home-products-category">metalizados</span>
+      </div>
+    </a>
+    <a class="products-card-anchor" href="laminaciones.html">
+      <div class="home-products-card aluminum products-modifier">
+        <div>
+          <img class="home-products-icon aluminum-i" src="img/icons/icon-aluminum.png">
+        </div>
+        <span class="home-products-category">laminaciones con<br>aluminio</span>
+      </div>
+    </a>
+  </div>
+</div>
 {% endblock %}
