@@ -1,0 +1,187 @@
+.services
+  background-image url("../img/backgrounds/services-bg.jpg")
+  background-position top right
+  background-repeat no-repeat
+  background-size cover
+  padding-top 100px
+
+  &-option
+    &-desktop
+      display block
+
+    &-mobile
+      display none
+
+  &-info
+    padding-left 110px
+
+  &-title
+    color $dGraySelect
+    font-size $font35
+    letter-spacing 0.5px
+
+  &-description
+    color $dGraySelect
+    font-size $font21
+    letter-spacing 1.7px
+    line-height 34px
+
+    &-container
+      max-width 522px
+
+  &-panel
+    background-color $dWhite
+    box-shadow 0 10px 24px 0 rgba(0, 0, 0, 0.15)
+    padding 28px 37px
+
+    &-towers
+      display flex
+      flex-direction row
+
+    &-sections
+      margin 40px 0
+
+    &-subtitle
+      color $dGraySelect
+      font-size $font20
+      letter-spacing 0.4px
+      line-height 43px
+      margin-bottom 9px
+
+    &-icon
+      &-container
+        margin 3px 20px 0 0
+
+    &-descriptions
+      color #878787
+      font-size $font13
+      letter-spacing 0.9px
+      line-height 21px
+
+      &-container
+        display flex
+        flex-direction row
+        margin-top 6px
+
+    &-characteristics
+      margin-top 6px
+
+.panel-top
+  margin-bottom 28px
+
+.tower-right
+  margin-right 28px
+
+.text-red
+  color $dRedText
+
+.show-option-container
+  padding-top 100px
+
+.select-option-container
+  display flex
+  flex-direction row
+  list-style none
+  justify-content center
+  margin 0
+  padding-left 0
+
+.select-option
+  align-items center
+  color $dWhite
+  cursor pointer
+  display flex
+  font-size $font14
+  height 102px
+  justify-content center
+  letter-spacing 2.1px
+  text-transform uppercase
+  transition all .1s linear
+  width 203px
+
+.lamination-opt
+  box-shadow -2px 0 rgba(0, 0, 0, 0.2)
+  color #484848
+
+.lamination-opt,
+.lamination
+  background-color #f2f2f2
+
+.cut-opt,
+.cut
+  background-color #484848
+
+.suaje-opt
+  color #737373
+
+.suaje-opt,
+.suaje
+  background-color #d8d8d8
+
+.splice-opt,
+.splice
+  background-color #992425
+
+.print-opt,
+.print
+  background-color #939393
+
+.info-selected-option
+  display none
+  max-height 100%
+  overflow-y auto
+
+  &.active
+    display block
+    padding 100px 79px 110px 79px
+
+@media screen and (max-width 786px)
+  .select-option
+    height 50px
+
+  .services
+    padding-top 50px
+
+    &-option
+      &-desktop
+        display none
+
+      &-mobile
+        display block
+
+    &-info
+      padding 0 30px
+
+    &-description
+      line-height 24px
+
+    &-panel
+      &-towers
+        flex-direction column
+
+      &-subtitle
+        line-height 20px
+
+      &-icon
+        &-container
+          margin-riht 10px
+
+      &-descriptions
+        line-height 15px
+
+        &-container
+          margin-top 15px
+
+  .tower-right
+    margin 0 0 28px 0
+
+  .show-option-container
+    flex-direction column
+    padding-top 50px
+
+  .select-option-container
+    margin 0 auto
+    padding-left 0
+
+  .info-selected-option.active
+    padding 50px 30px 80px 30px
