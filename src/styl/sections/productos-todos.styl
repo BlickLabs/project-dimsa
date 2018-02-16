@@ -1,0 +1,97 @@
+.allproducts
+  &-desktop
+      display block
+
+  &-mobile
+    display none
+
+  &-container
+    display flex
+    flex-direction row
+    padding 76px 60px 195px 44px
+
+  &-panel
+    &-container
+      padding 162px 77px 0 0
+
+  &-option
+    background-color #d8d8d8
+
+    &.select-option
+      color #494949
+      font-size remify(17px)
+      font-weight 500
+      justify-content flex-start
+      letter-spacing 2.8px
+      line-height 13px
+      margin-bottom 5px
+      padding-left 33px
+      width 295px
+
+    .select-option-container&-container
+      flex-direction column
+
+    &.active
+      background-color $dRedText
+      color white
+      font-weight 800
+
+  &-title
+    color $dGrayText
+    font-size remify(38px)
+    letter-spacing 0.5px
+
+    &-container
+      margin-bottom 95px
+
+  &-info-container
+    margin-bottom 25px
+
+  &-subtitle
+    color $dGrayText
+    font-size remify(29px)
+    letter-spacing 0.5px
+
+    &-container
+      margin-bottom 10px
+
+  &-description
+    color $dGrayText
+    font-size remify(16px)
+    letter-spacing 1.2px
+    line-height 29px
+
+  &-img
+    height 53%
+    width 53%
+
+    &-container
+      display flex
+      justify-content center
+
+.info-selected-option.active.allproducts-content.active
+  padding 0
+
+@media screen and (max-width 786px)
+  .allproducts
+    &-container
+      flex-direction column
+
+    &-desktop
+            display none
+
+    &-mobile
+      display block
+
+    &-title
+      &-container
+        margin-bottom 30px
+
+    &-panel
+      &-container
+        padding 0 0 30px 0
+
+    &-option
+      &.select-option
+        width 200px
+
