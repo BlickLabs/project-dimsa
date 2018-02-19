@@ -45,7 +45,7 @@ productsCarousel.owlCarousel ({
       autoWidth: false,
       items: 4,
       dots: true,
-      center: true,
+      center: false,
     }
   }
 });
