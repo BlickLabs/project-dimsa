@@ -17,12 +17,12 @@
       <span>Servicios</span>
       <div class="link-decorator {% if section == 'servicios' %} decorator-active {% endif %}"></div>
     </a>
-    <div class="dropdown navbar-option-link {% if section == 'categorias' %} active-link {% endif %}">
+    <div class="dropdown navbar-option-link {% if section == 'productos' or section == 'especialidades' or section == 'papeles' or section == 'laminaciones' or section == 'metalizados' or section == 'empaques' %} active-link {% endif %}">
       <span onclick="myFunction()" class="dropbtn">Productos</span>
       <div class="down-triangle-container">
         <img class="down-triangle" src="img/icons/down-triangle.png">
       </div>
-      <div class="link-decorator {% if section == 'categorias' %} decorator-active {% endif %}"></div>
+      <div class="link-decorator {% if section == 'productos' or section == 'especialidades' or section == 'papeles' or section == 'laminaciones' or section == 'metalizados' or section == 'empaques' %} decorator-active {% endif %}"></div>
       <div id="myDropdown" class="dropdown-content">
         <a href="productos.html" class="{% if section == 'productos' %} active-dropdown {% endif %}">Ver todos</a>
         <a href="especialidades.html" class="{% if section == 'especialidades' %} active-dropdown {% endif %}">Especialidades</a>
@@ -59,31 +59,31 @@
       </div>
     </div>
     <div class="hamburger-menu-body" data-attribute="">
-      <a data-attribute="" href="index.html" class="hamburger-option-link">
-        <div class="hamburger-text-container">
+      <div class="hamburger-text-container" data-attribute="">
+        <a data-attribute="" href="index.html" class="hamburger-option-link">
           <span class="hamburger-text">Inicio</span>
           <div class="link-decorator {% if section == 'index' %} decorator-active {% endif %}"></div>
-        </div>
-      </a>
-      <a data-attribute="" href="nosotros.html" class="hamburger-option-link">
-        <div class="hamburger-text-container">
+        </a>
+      </div>
+      <div class="hamburger-text-container" data-attribute="">
+        <a data-attribute="" href="nosotros.html" class="hamburger-option-link">
           <span class="hamburger-text">Nosotros</span>
           <div class="link-decorator {% if section == 'nosotros' %} decorator-active {% endif %}"></div>
-        </div>
-      </a>
-      <a data-attribute="" href="servicios.html" class="hamburger-option-link">
-        <div class="hamburger-text-container">
+        </a>
+      </div>
+      <div class="hamburger-text-container" data-attribute="">
+        <a data-attribute="" href="servicios.html" class="hamburger-option-link">
           <span class="hamburger-text">Servicios</span>
           <div class="link-decorator {% if section == 'servicios' %} decorator-active {% endif %}"></div>
-        </div>
-      </a>
+        </a>
+      </div>
       <div href="productos.html" class="hamburger-option-link">
-        <div data-attribute="" class="hamburger-text-container hamburger-dropdown-container">
+        <div data-attribute="" class="hamburger-text-container hamburger-dropdown-container dropdown {% if section == 'productos' or section == 'especialidades' or section == 'papeles' or section == 'laminaciones' or section == 'metalizados' or section == 'empaques' %} active-link {% endif %}">
           <span data-attribute="" onclick="hamburgerDropDown()" class="dropbtn">Productos</span>
           <div class="down-triangle-container">
             <img class="down-triangle" src="img/icons/down-triangle-white.png">
           </div>
-          <div class="link-decorator {% if section == 'categorias' %} decorator-active {% endif %}"></div>
+          <div class="link-decorator {% if section == 'productos' or section == 'especialidades' or section == 'papeles' or section == 'laminaciones' or section == 'metalizados' or section == 'empaques' %} decorator-active {% endif %}"></div>
           <div id="hambugerDropdown" class="dropdown-content">
             <a href="productos.html" class="{% if section == 'productos' %} active-dropdown {% endif %}">Ver todos</a>
             <a href="especialidades.html" class="{% if section == 'especialidades' %} active-dropdown {% endif %}">Especialidades</a>
@@ -94,12 +94,12 @@
           </div>
         </div>
       </div>
-      <a data-attribute="" href="contacto.html" class="hamburger-option-link">
-        <div class="hamburger-text-container">
+      <div class="hamburger-text-container" data-attribute="">
+        <a data-attribute="" href="contacto.html" class="hamburger-option-link">
           <span class="hamburger-text">Contacto</span>
           <div class="link-decorator {% if section == 'contacto' %} decorator-active {% endif %}"></div>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </nav>

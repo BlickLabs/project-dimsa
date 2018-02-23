@@ -7,5 +7,5 @@ allProductsCarousel.owlCarousel ({
   autoWidth: true,
   items: 4,
   dots: true,
-  center: true
+  center: false,
 });

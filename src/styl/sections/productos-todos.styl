@@ -8,7 +8,7 @@
   &-container
     display flex
     flex-direction row
-    padding 76px 60px 195px 44px
+    padding 76px 30px 195px 30px
 
   &-panel
     &-container
@@ -19,13 +19,13 @@
 
     &.select-option
       color #494949
-      font-size remify(17px)
+      font-size remify(14.4px)
       font-weight 500
       justify-content flex-start
       letter-spacing 2.8px
-      line-height 13px
+      line-height 18px
       margin-bottom 5px
-      padding-left 33px
+      padding 0 33px
       width 295px
 
     .select-option-container&-container
@@ -49,7 +49,7 @@
 
   &-subtitle
     color $dGrayText
-    font-size remify(29px)
+    font-size remify(26px)
     letter-spacing 0.5px
 
     &-container
@@ -68,6 +68,7 @@
     &-container
       display flex
       justify-content center
+      margin-top 70px
 
 .info-selected-option.active.allproducts-content.active
   padding 0
@@ -93,5 +94,12 @@
 
     &-option
       &.select-option
+        font-size remify(12px)
+        letter-spacing 2px
+        line-height 15px
+        padding 0 15px
         width 200px
+
+  .info-selected-option.active.allproducts-content.active
+    padding 20px 0 40px 0
 

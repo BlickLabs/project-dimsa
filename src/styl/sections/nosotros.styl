@@ -52,7 +52,7 @@
     &-background
       background-color $dGrayBackg
       bottom 60px
-      left 0
+      left 160px
       position absolute
       right -86px
       top -50px
@@ -86,7 +86,7 @@
       margin-top 60px
 
     &-img
-      background-postion center
+      background-position center
       background-repeat no-repeat
       background-size cover
       height 500px
@@ -189,15 +189,15 @@
         top 155px
 
     &-products
-      flex-direction column
-      margin-bottom 50px
+      flex-direction column-reverse
+      margin-bottom 180px
 
       &-img
         height 320px
         width 300px
 
       &-info
-        margin 100px 40px 20px 40px
+        margin 30px 40px 50px 40px
 
       &-button-container
         margin-top 30px
@@ -227,6 +227,56 @@
     height 70px
     padding-right 10px
     width 260px
+
+  .about-us-carousel
+    .about-controls
+      .owl-nav
+        padding-left 30px
+
+@media screen and (min-width 787px) and (max-width 1075px)
+  .about
+    &-materials
+      padding-left 50px
+
+      &-background
+        width 290px
+
+      &-info
+        margin-right 100px
+
+      &-img
+        height 380px
+        width 300px
+
+        &-container
+          right 40px
+
+    &-products
+      &-img
+        width 495px
+
+      &-info
+        margin 0 50px
+
+    &-commitment
+      margin 0 40px 0 60px
+
+      &-background
+        left 70px
+
+      &-info
+        margin-right 50px
+
+      &-img
+        height 358px
+        width 340px
+
+  .about-us-carousel
+      width 350px
+
+  .about-controls
+    padding-right 30px
+    width 315px
 
   .about-us-carousel
     .about-controls
