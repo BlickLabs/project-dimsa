@@ -4,9 +4,18 @@
   &-container
     position relative
 
+.cover
+  &-one
+    background-image url("../img/backgrounds/home-carousel-1.jpg")
+
+  &-two
+    background-image url("../img/backgrounds/home-carousel-2.jpg")
+
+  &-three
+    background-image url("../img/backgrounds/home-carousel-3.jpg")
+
 .home
   &-cover
-    background-image url("../img/backgrounds/home-carousel-1.jpg")
     background-position center
     background-repeat no-repeat
     background-size cover
@@ -90,16 +99,16 @@
         background-image url("../img/home/papper.jpg")
 
       &.packing
-        background-image url("../img/home/packing.jpg")
+        background-image url("../img/home/product-packings.jpg")
 
       &.specialties
-        background-image url("../img/home/specialties.jpg")
+        background-image url("../img/home/product-specialties.jpg")
 
       &.metallic
-        background-image url("../img/home/metallic.jpg")
+        background-image url("../img/home/product-metallizeds.jpg")
 
       &.aluminum
-        background-image url("../img/home/aluminum.jpg")
+        background-image url("../img/home/product-laminations.jpg")
 
     &-icon
       height 62px
@@ -224,6 +233,9 @@
       display flex
       flex-direction row
 
+    &-clients-container
+      align-items center
+
     &-separator
       background-color $dWhite
       height 26px
@@ -240,14 +252,20 @@
 
     &-logo
 
-      &-scribe
+      &-scribe,
+      &-scribe-container
         height 32px
 
-      &-peosa
+      &-peosa,
+      &-peosa-container
         height 27px
-        margin 0 105px
 
-      &-pappel
+      &-peosa
+        &-container
+          margin 0 105px
+
+      &-pappel,
+      &-pappel-container
         height 21px
 
 @keyframes lineAnimated
@@ -299,6 +317,9 @@
           height 2px
           width 24px
 
+/*.products-carousel
+  margin-left 270px*/
+
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
   background-color $dGraySelect
 
@@ -320,10 +341,10 @@
   display flex
   flex-direction row-reverse
   height 106px
-  left 300px
+  left -7px
   padding-right 50px
   position absolute
-  width 540px
+  width auto
 
 .nav-arrows
   height 11px
@@ -427,21 +448,32 @@
         width 26px
 
       &-logo
-        &-scribe
+
+        &-scribe,
+        &-scribe-container
           height 22px
 
-        &-peosa
+        &-peosa,
+        &-peosa-container
           height 21px
-          margin 0 25px
 
-        &-pappel
+        &-peosa
+          &-container
+            margin 0 25px
+
+        &-pappel,
+        &-pappel-container
           height 17px
+
+  .products-carousel
+    margin-left 0
+    padding-left 7px
 
   .products-owl-controls
     bottom -106px
     left 0
-    padding-right 30px
-    width 300px
+    padding-right 0
+    width auto
 
   .owl-controls
     padding-right 30px
@@ -471,6 +503,13 @@
     &-logo-peosa
       margin 0 65px
 
-@media screen and (min-width 787px) and (max-width 830px)
+@media screen and (min-width 1265px)
   .products-owl-controls
-    left 210px
+    left 37.3%
+
+@media screen and (max-width 1264px)
+  .products-carousel
+    padding-left 45px
+
+  .products-owl-controls
+    left 45px
