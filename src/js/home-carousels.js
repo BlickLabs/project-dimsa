@@ -33,7 +33,7 @@ productsCarousel.owlCarousel ({
   margin: 10,
   nav: true,
   autoWidth: true,
-  items: 4,
+  items: 5,
   dots: true,
   center: false,
   navText: ['<img class="nav-arrows" src="img/icons/left-arrow.png" />', '<img class="nav-arrows" src="img/icons/right-arrow.png" />'],
@@ -45,7 +45,7 @@ productsCarousel.owlCarousel ({
       autoWidth: false,
       items: 4,
       dots: true,
-      center: false,
+      center: true,
     }
   }
 });
