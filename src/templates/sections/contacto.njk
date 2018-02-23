@@ -15,7 +15,7 @@
       <div class="contact-description-container">
         <span class="contact-description">Déjanos tus datos y nos pondremos en contacto.</span>
       </div>
-      <form name="contact-form">
+      <form name="contact-form" method="post" action="http://integrations.blick.mx/dimsa/contact/">
         <div class="contact-form-contents">
           <label class="contact-form-labels">*Nombre</label>
           <input class="contact-form-inputs" type="text" name="name" required>
@@ -34,7 +34,7 @@
         </div>
         <div class="contact-form-contents">
           <label class="contact-form-labels">Cuéntanos tu necesidad</label>
-          <textarea  class="contact-form-textarea" name="comments" placeholder="Escribe aquí..."></textarea>
+          <textarea  class="contact-form-textarea" name="message" placeholder="Escribe aquí..."></textarea>
         </div>
         <button class="dimsa-button" type="submit">enviar</button>
       </form>
