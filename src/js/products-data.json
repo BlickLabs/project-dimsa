@@ -1,0 +1,1196 @@
+{
+  "specialties": [
+    {
+      "data": "speone",
+      "title": "Fibra sólida laminada por dos caras",
+      "characteristics": [
+        {
+          "characteristic": "Se fabrican  con cartones de 22 a 40 puntos."
+        },
+        {
+          "characteristic": "Puede ser entregada  en hoja o en bobina."
+        },
+        {
+          "characteristic": "Polietileno acabado brillante o mate."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "El laminado con polietileno da protección contra la abrasión y la humedad."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para la elaboración de divisiones y separadores (partitions)."
+        }
+      ],
+      "image": "laminated-cartonstwo.jpg",
+      "active": "active"
+    },
+    {
+      "data": "spetwo",
+      "title": "Fibra sólida laminada con tela no tejida por una o dos caras",
+      "characteristics": [
+        {
+          "characteristic": "Se fabrican con cartones de 22 a 40 puntos."
+        },
+        {
+          "characteristic": "Puede ser entregado  en hojas o en bobinas."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "El laminado con  tela no tejida da protección contra la abrasión."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para la elaboración de divisiones  y separadores (partitions)."
+        }
+      ],
+      "image": "solid-fiber.jpg"
+    },
+    {
+      "data": "spethree",
+      "title": "Papel siliconado",
+      "characteristics": [
+        {
+          "characteristic": "Papel de 67 g/m2."
+        },
+        {
+          "characteristic": "Puede ser siliconado por una o dos caras."
+        },
+        {
+          "characteristic": "Puede ser entregado en hojas o en bobinas."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Material con un release de 3 a 7 que permite la protección de los adhesivos. "
+        }
+      ],
+      "uses": [
+        {
+          "use": "Papel con propiedades antiadherentes."
+        }
+      ],
+      "image": "silicone-paper.jpg"
+    },
+    {
+      "data": "spefour",
+      "title": "Papel laminado con aditivo antiderrapante",
+      "characteristics": [
+        {
+          "characteristic": "Papel de 100g  laminado con aditivo antiderrapante mezclado con polietileno."
+        },
+        {
+          "characteristic": "Puede ser entregado en hojas o en bobinas."
+        },
+        {
+          "characteristic": "Ideal para embalaje."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Altamente resistente."
+        },
+        {
+          "benefit": "Impide que los materiales resbalen."
+        },
+        {
+          "benefit": "Ideal para embalaje."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizados como separadores para tarimas de madera que no permiten que el producto se deslice sobre la tarima al tener una inclinación."
+        }
+      ],
+      "image": "paper-laminate-additive.jpg"
+    },
+    {
+      "data": "spefive",
+      "title": "Laminaciones papel con rafia y  polietileno",
+      "characteristics": [
+        {
+          "characteristic": "Laminaciones con diversos papeles  o películas."
+        },
+        {
+          "characteristic": "La rafia es de polietileno"
+        },
+        {
+          "characteristic": "Puede ser entregado en bobina o tubular."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "La rafia utilizada es de polietileno y el laminado les da alta resistencia a la tensión."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Material de empaque y embalaje."
+        }
+      ],
+      "image": "reinforced-laminations.jpg"
+    },
+    {
+      "data": "spesix",
+      "title": "Cartones conductivos antiestáticos",
+      "characteristics": [
+        {
+          "characteristic": "Cartones de 20 a 40 puntos laminados con una plasta negra."
+        },
+        {
+          "characteristic": "Puede ser entregado en hojas o en bobinas."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Material conductivo."
+        },
+        {
+          "benefit": "Evita la estática."
+        },
+        {
+          "benefit": "Evita que los aparatos electrónicos se vayan a corto."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizados para diversos circuitos."
+        }
+      ],
+      "image": "conductive-cartons.jpg"
+    },
+    {
+      "data": "speseven",
+      "title": "Slip sheet",
+      "characteristics": [
+        {
+          "characteristic": "Papel  liner de 275g y un poliéster transparente  de 23 micras."
+        },
+        {
+          "characteristic": "Puede ser entregado en hojas o en bobinas."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Sustituyen a una tarima de madera."
+        },
+        {
+          "benefit": "Protección a la humedad."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizados como tarimas deslizables."
+        }
+      ],
+      "image": "slip-sheet.jpg"
+    },
+    {
+      "data": "speeight",
+      "title": "Cinta gorila",
+      "characteristics": [
+        {
+          "characteristic": "Es una cinta de papel reforzada con  una  malla de fibra de vidrio, el cual está impregnado con un adhesivo rehumectable."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "La cinta cuenta con una adhesión extrema para el pegado de cajas de cartón."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Cinta engomada reforzada que sirve para sellar cajas de cartón corrugado de una manera limpia y más segura que una cinta convencional."
+        }
+      ],
+      "image": "gorilla-tape.jpg"
+    }
+  ],
+  "papers": [
+    {
+      "data": "paperone",
+      "title": "Bond",
+      "characteristics": [
+        {
+          "characteristic": "Papel blanco desde 30 g hasta 150 g."
+        },
+        {
+          "characteristic": "Se puede entregar en bobinas o en hojas."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Logra un acabado perfecto en cualquier tipo de impresión."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Papel blanco para impresión, laminación y/o corte."
+        },
+        {
+          "use": "Papel para empaque plotter."
+        }
+      ],
+      "image": "paper-bond.jpg",
+      "active": "active"
+    },
+    {
+      "data": "papertwo",
+      "title": "Kraft",
+      "characteristics": [
+        {
+          "characteristic": "Papel de 32 g hasta 130 g."
+        },
+        {
+          "characteristic": "Es un material con encolado resistente a la humedad."
+        },
+        {
+          "characteristic": "Se puede entregar en hojas o bobinas."
+        },
+        {
+          "characteristic": "En algunos gramajes puede ser blanco."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Protege el contenido de un  producto."
+        },
+        {
+          "benefit": "Es resistente para utilizar como embalaje."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Papel utilizado para empaques, separadores y embalajes."
+        },
+        {
+          "use": "También se puede imprimir y  laminar."
+        }
+      ],
+      "image": "paper-kraft.png"
+    },
+    {
+      "data": "paperthree",
+      "title": "Liner",
+      "characteristics": [
+        {
+          "characteristic": "Cartón café desde 140 hasta 500g."
+        },
+        {
+          "characteristic": "Contiene encolado lo que previene una rápida absorción de la humedad."
+        },
+        {
+          "characteristic": "Se puede entregar en bobinas o en hojas."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Papel nacional, material con encolado resistente a la humedad."
+        },
+        {
+          "benefit": "Se puede entregar en colores."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para separadores y divisores."
+        },
+        {
+          "use": "Cartón para hacer cajas."
+        }
+      ],
+      "image": "paper-linner.jpg"
+    },
+    {
+      "data": "paperfour",
+      "title": "Médium",
+      "characteristics": [
+        {
+          "characteristic": "Cartón café de 100 hasta 700g con poco encolado."
+        },
+        {
+          "characteristic": "Se puede entregar en bobinas o en hojas. "
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Papel nacional."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Papel utilizado para separadores, divisores, cajas."
+        }
+      ],
+      "image": "paper-medium.jpg"
+    },
+    {
+      "data": "paperfive",
+      "title": "Polibond",
+      "characteristics": [
+        {
+          "characteristic": "Papel blanco de 30 a 120g, laminado con una película de polietileno de baja densidad (LDPE)."
+        },
+        {
+          "characteristic": "Se puede cortar en hojas o rollos de anchos y diámetros diferentes."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Hace una barrera a la humedad y a la grasa."
+        },
+        {
+          "benefit": "Termosellable por cara plastificada."
+        },
+        {
+          "benefit": "Inocuidad Laminado que cumple con lo establecido por la FDA."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado  para la fabricación de estuchados o bolsas para envasar equipos de curación, polvos, alimentos,etc."
+        }
+      ],
+      "image": "paper-polibond.jpg"
+    },
+    {
+      "data": "papersix",
+      "title": "Polikraft",
+      "characteristics": [
+        {
+          "characteristic": "Papel café Kraft de distintos gramajes."
+        },
+        {
+          "characteristic": "Laminado con una película de polietileno de baja densidad (LDPE)."
+        },
+        {
+          "characteristic": "Se puede cortar en bobinas y hojas de diferentes tamaños."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Hace una barrera a la humedad y a la grasa."
+        },
+        {
+          "benefit": "Termosellable por cara plastificada."
+        },
+        {
+          "benefit": "Inocuidad."
+        },
+        {
+          "benefit": "Laminado que  cumple con lo establecido por la FDA."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado  para la fabricación de estuchados o bolsas para envasar equipos de curación, polvos, alimentos, etc."
+        }
+      ],
+      "image": "paper-polikraft.jpg"
+    },
+    {
+      "data": "paperseven",
+      "title": "Poliglassine",
+      "characteristics": [
+        {
+          "characteristic": "Papel Glassine de 40 a 120 g, laminado con una película de polietileno de baja densidad (LDPE)."
+        },
+        {
+          "characteristic": "Se puede cortar en rollos de anchos y diámetros diferentes."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Hace una barrera a la humedad y a la grasa."
+        },
+        {
+          "benefit": "Inocuidad."
+        },
+        {
+          "benefit": "Laminado que cumple con lo establecido por la FDA."
+        },
+        {
+          "benefit": "Cara satinada para mejor impresión."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado  para la fabricación de estuchados o bolsas para envasar equipos de curación y empaque de productos alimenticios en polvo o granulado."
+        }
+      ],
+      "image": "paper-poliglassine.jpg"
+    },
+    {
+      "data": "papereight",
+      "title": "Poliliner",
+      "characteristics": [
+        {
+          "characteristic": "Papel café laminado de 140 hasta 500 g."
+        },
+        {
+          "characteristic": "Laminación desde 12 hasta 40g de LDPE."
+        },
+        {
+          "characteristic": "Acabado del plástico puede ser mate o brillante."
+        },
+        {
+          "characteristic": "Se puede entregar en bobinas y hojas de diferentes medidas."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Laminado que cumple con lo establecido en la FDA."
+        },
+        {
+          "benefit": "Inocuidad."
+        },
+        {
+          "benefit": "Pureza y calidad."
+        },
+        {
+          "benefit": "Se pueden aplicar distintos aditivos para crear deslizante, antideslizante y barrera a grasa."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Separadores y divisores especializados para proteger piezas."
+        },
+        {
+          "use": "Papel para cubrir pisos o cualquier material que necesite protección contra condiciones extremas."
+        }
+      ],
+      "image": "paper-polilinner.png"
+    },
+    {
+      "data": "papernine",
+      "title": "Polipet",
+      "characteristics": [
+        {
+          "characteristic": "Película PET con laminación de PE."
+        },
+        {
+          "characteristic": "El poliéster utilizado cuenta con un tratamiento corona que garantiza una buena printabilidad."
+        },
+        {
+          "characteristic": "Se puede entregar con o sin impresión."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Inocuidad, Barreras a la Humedad y a la grasa."
+        },
+        {
+          "benefit": "Termosellable."
+        },
+        {
+          "benefit": "Imprimible."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para empaques flexibles, envasado de productos alimenticios y bolsas de sellado hermético a calor y presión."
+        }
+      ],
+      "image": "paper-polipet.jpg"
+    },
+    {
+      "data": "paperten",
+      "title": "Papel laminado tipo sándwich",
+      "characteristics": [
+        {
+          "characteristic": "Unión de dos papeles del mismo tipo o diferente."
+        },
+        {
+          "characteristic": "Laminado con polietileno."
+        },
+        {
+          "characteristic": "Con o sin impresión."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Mayor resistencia."
+        },
+        {
+          "benefit": "Barrera a la humedad."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Papel para empaque de rebobinado."
+        },
+        {
+          "use": "Papel para empaque de resinas."
+        }
+      ],
+      "image": ""
+    }
+  ],
+  "laminations": [
+    {
+      "data": "laminationone",
+      "title": "Bondpolifoil",
+      "characteristics": [
+        {
+          "characteristic": "Papel Bond + Aluminio"
+        },
+        {
+          "characteristic": "O"
+        },
+        {
+          "characteristic": "Papel Bond + Aluminio + LDPE (plástico)."
+        },
+        {
+          "characteristic": "Gramajes desde 60 g hasta 200 g."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Inocuidad, pureza."
+        },
+        {
+          "benefit": "Barreras a la oxigenación y a la luz."
+        },
+        {
+          "benefit": "Imprimible."
+        },
+        {
+          "benefit": "Puede ser termosellable."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Empaques Alimenticios y Médicos."
+        },
+        {
+          "use": "Mantiene la Temperatura."
+        },
+        {
+          "use": "Empaques que requieren alta barrera."
+        }
+      ],
+      "image": "bond-polifoil.jpg",
+      "active": "active"
+    },
+    {
+      "data": "laminationtwo",
+      "title": "Kraftpolifoil",
+      "characteristics": [
+        {
+          "characteristic": "Papel Kraft + Aluminio"
+        },
+        {
+          "characteristic": "O"
+        },
+        {
+          "characteristic": "Papel Kraft + Aluminio + LDPE."
+        },
+        {
+          "characteristic": "Gramajes desde 60 g hasta 200 g."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Inocuidad, pureza Barreras a la oxigenación y a la luz."
+        },
+        {
+          "benefit": "Imprimible."
+        },
+        {
+          "benefit": "Puede ser termosellable."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para fabricar cajas plegadizas para uso incinerable."
+        },
+        {
+          "use": "Empaques Alimenticios y Médicos."
+        },
+        {
+          "use": "Mantiene la Temperatura."
+        },
+        {
+          "use": "Empaques que requieren alta barrera."
+        }
+      ],
+      "image": "kraft-polifoil.jpg"
+    },
+    {
+      "data": "laminationthree",
+      "title": "Glasspolifoil / Couchépolifoil",
+      "characteristics": [
+        {
+          "characteristic": "Papel Glassine/Couché + Aluminio"
+        },
+        {
+          "characteristic": "O"
+        },
+        {
+          "characteristic": "Papel Glassine/Couché + Aluminio + LDPE."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Inocuidad."
+        },
+        {
+          "benefit": "Barrera  a la oxigenación y a la luz."
+        },
+        {
+          "benefit": "Apariencia sumamente blanca, brillante e imprimible."
+        },
+        {
+          "benefit": "Puede ser termosellable."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Empaques Alimenticios y Médicos."
+        },
+        {
+          "use": "Mantiene la Temperatura."
+        },
+        {
+          "use": "Empaques que requieren alta barrera."
+        }
+      ],
+      "image": "glass-polifoil.jpg"
+    },
+    {
+      "data": "laminationfour",
+      "title": "Petpolifoil",
+      "characteristics": [
+        {
+          "characteristic": "PET + Aluminio"
+        },
+        {
+          "characteristic": "O"
+        },
+        {
+          "characteristic": "PET+ Aluminio + LDPE."
+        },
+        {
+          "characteristic": "En la cara del sellado puede llevar polietileno o surlyn."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Laminación con aluminio que hace una barrera a la oxigenación y a la luz."
+        },
+        {
+          "benefit": "Cuenta con un tratamiento corona en el poliéster."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para la fabricación de envases flexibles, bolsas selladas al calor y presión de diferentes tamaños (pouchs)."
+        },
+        {
+          "use": "Empaques que requieren alta barrera."
+        }
+      ],
+      "image": "pet-polifoil.jpg"
+    }
+  ],
+  "metallizeds": [
+    {
+      "data": "metallizedone",
+      "title": "Cartulinas metalizadas",
+      "characteristics": [
+        {
+          "characteristic": "Están compuestas por caples, SBS, y cartones multicapas  desde calibre 10 hasta calibre 28 con un PET Metalizado químico."
+        },
+        {
+          "characteristic": "Pueden ser en colores."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "El poliéster utilizado cuenta con un tratamiento químico que garantiza una tensión superficial de 44 dinas."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizadas para la fabricación de cajas plegadizas con una brillante y llamativa presentación."
+        }
+      ],
+      "image": "metallized-cardboards.jpg",
+      "active": "active"
+    },
+    {
+      "data": "metallizedtwo",
+      "title": "Cartulinas holográficas",
+      "characteristics": [
+        {
+          "characteristic": "Están compuestas por caples, SBS, y cartones multicapas  desde calibre 10 hasta calibre 28 con un PET metalizado holográfico."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "El poliéster utilizado cuenta con un tratamiento químico que garantiza una tensión superficial de 44 dinas."
+        },
+        {
+          "benefit": "El holograma no contiene línea de GAP."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizadas para la fabricación de cajas plegadizas con una brillante y llamativa presentación."
+        }
+      ],
+      "image": "holographic-cardboards.jpg"
+    },
+    {
+      "data": "metallizedthree",
+      "title": "Papeles metalizados",
+      "characteristics": [
+        {
+          "characteristic": "Esta hecho por un papel de 38 g  más polietileno más poliéster metalizado."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "El poliéster metalizado cuenta con un tratamiento químico que garantiza una tensión superficial de 44 dinas."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizados para envolturas de regalos."
+        }
+      ],
+      "image": "metallized-papers.jpg"
+    },
+    {
+      "data": "metallizedfour",
+      "title": "Autoadheribles metalizados",
+      "characteristics": [
+        {
+          "characteristic": "Compuesta por un papel metalizado y un papel reliz. (Se proponen distintas estructuras)."
+        },
+        {
+          "characteristic": "Se puede aplicar un poliéster holográfico o metalizado imprimible."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "La estructura contiene un papel reliz que permite desprender el metalizado para aplicar como autoadherible."
+        },
+        {
+          "benefit": "Imprimible."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para publicidad, etiquetas o cualquier aplicación metalizada que requiera pegarse en otra superficie."
+        }
+      ],
+      "image": "metallized-selfadhesive.jpg"
+    }
+  ],
+  "packagings": [
+    {
+      "data": "packagingone",
+      "title": "Papel encerado",
+      "characteristics": [
+        {
+          "characteristic": "Se utilizan papeles bond grado alimenticio de 30 a 75g."
+        },
+        {
+          "characteristic": "Aplicación de cera FDA por una o dos caras."
+        },
+        {
+          "characteristic": "Se puede entregar impreso."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Resistente a la grasa y humedad."
+        },
+        {
+          "benefit": "Facilidad de envolver cualquier alimento."
+        },
+        {
+          "benefit": "Mantiene y protege alimentos. Evita que el alimento se pegue al papel."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para envolver alimentos."
+        },
+        {
+          "use": "Ideal para servir alimentos de comida rápida."
+        },
+        {
+          "use": "Envoltura de chicles o elementos pegajosos."
+        },
+        {
+          "use": "Envoltura de pasteles."
+        }
+      ],
+      "image": "wax-paper.jpg",
+      "active": "active"
+    },
+    {
+      "data": "packagingtwo",
+      "title": "Papel laminado",
+      "characteristics": [
+        {
+          "characteristic": "Son papeles de 30 hasta 120 g con una capa de polietileno  de baja densidad (LDPE)."
+        },
+        {
+          "characteristic": "Papel blanco o café."
+        },
+        {
+          "characteristic": "Con o sin impresión."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Inocuidad."
+        },
+        {
+          "benefit": "Termosellable."
+        },
+        {
+          "benefit": "Barrera a la grasa y a la humedad."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para la fabricación  de envolturas para ensobretar polvos, empaques de gasas y colorantes."
+        }
+      ],
+      "image": "laminated-paper.jpg"
+    },
+    {
+      "data": "packagingthree",
+      "title": "Papel envoltura térmica para comida",
+      "characteristics": [
+        {
+          "characteristic": "Son papeles bond grado alimenticio de 30 a 75 g."
+        },
+        {
+          "characteristic": "Laminados con un foil de aluminio de 6 micras."
+        },
+        {
+          "characteristic": "Los materiales se pueden entregar con o sin impresión."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Mantiene la temperatura de los alimentos."
+        },
+        {
+          "benefit": "Se adapta a la forma de los alimentos."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Envoltura para alimentos de comida rápida."
+        },
+        {
+          "use": "Empaque de alta barrera y presentación."
+        }
+      ],
+      "image": "thermal-wrapping.jpg"
+    },
+    {
+      "data": "packagingfour",
+      "title": "Papel antigrasa",
+      "characteristics": [
+        {
+          "characteristic": "Es un papel blanco con tonalidad cremosa."
+        },
+        {
+          "characteristic": "Puede ser entregado con o sin impresión."
+        },
+        {
+          "characteristic": "Entregado en bobinas o en hojas."
+        },
+        {
+          "characteristic": "Kit 3 a 7."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Es resistente a la grasa y humedad."
+        },
+        {
+          "benefit": "No altera el sabor del producto."
+        },
+        {
+          "benefit": "Los materiales empleados en su fabricación, cumplen con lo establecido por la FDA."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Papel envoltura para alimentos y productos grasos."
+        }
+      ],
+      "image": "antigrease-paper.jpg"
+    },
+    {
+      "data": "packagingfive",
+      "title": "Papel tortilla",
+      "characteristics": [
+        {
+          "characteristic": "Papel blanco o café con o sin polietileno."
+        },
+        {
+          "characteristic": "Papel biodegradable."
+        },
+        {
+          "characteristic": "Impresión hasta 5 colores."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Es un papel grado alimenticio que cumple con lo establecido por la FDA."
+        },
+        {
+          "benefit": "Resistente a la humedad y a la grasa."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Papel para envolver tortillas."
+        }
+      ],
+      "image": "tortilla-paper.jpg"
+    },
+    {
+      "data": "packagingsix",
+      "title": "Papel siliconado para hornear",
+      "characteristics": [
+        {
+          "characteristic": "Papel con silicón especial en su composición, 40 g/m2."
+        },
+        {
+          "characteristic": "Papel grado alimenticio."
+        },
+        {
+          "characteristic": "Cumplen con lo establecido por la FDA."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Resistente a las altas temperaturas del horneado."
+        },
+        {
+          "benefit": "Resistente a la grasa y a la humedad del alimento."
+        },
+        {
+          "benefit": "Evita el pegado del pan en las charolas."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Utilizado para  hornear galletas, panques, etc."
+        }
+      ],
+      "image": "baking paper.jpg"
+    },
+    {
+      "data": "packagingseven",
+      "title": "Caja para hamburguesa",
+      "characteristics": [
+        {
+          "characteristic": "Materiales más utilizados para su fabricación: caple reverso blanco, caple reverso café, multicapa y SBS."
+        },
+        {
+          "characteristic": "Se manejan en calibres de 12 hasta 18 puntos."
+        },
+        {
+          "characteristic": "Caja plegadiza con o sin plástico interno."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Barrera contra la grasa y humedad."
+        },
+        {
+          "benefit": "Materiales que cumplen con lo establecido por la FDA."
+        },
+        {
+          "benefit": "Mantiene el alimento en buenas condiciones."
+        },
+        {
+          "benefit": "Tapa integrada."
+        },
+        {
+          "benefit": "Amigable con el ambiente."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Caja plegadiza ideal para empacar y transportar alimentos a domicilio."
+        }
+      ],
+      "image": "hamburger-box.jpg"
+    },
+    {
+      "data": "packagingeight",
+      "title": "Canastilla de cartón para comida",
+      "characteristics": [
+        {
+          "characteristic": "Materiales más utilizados: caple reverso blanco, caple reverso café, multicapa y SBS."
+        },
+        {
+          "characteristic": "Se manejan en calibres de 16 hasta a18 puntos."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Sustituyen a las charolas de poliestireno."
+        },
+        {
+          "benefit": "Hace una barrera contra la grasa y humedad de los alimentos."
+        },
+        {
+          "benefit": "Amigable con el ambiente."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Canastillas utilizadas para comida rápida."
+        }
+      ],
+      "image": "paperboard-layette.jpg"
+    },
+    {
+      "data": "packagingnine",
+      "title": "Charola metalizada para pescado/salmón Pastelería",
+      "characteristics": [
+        {
+          "characteristic": "Compuestas de dos cartulinas  de 18 puntos ambas caras llevan poliéster metalizado."
+        },
+        {
+          "characteristic": "En colores oro y plata."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "La charola tiene rigidez y diferentes tamaños de acuerdo a la porción que se va empacar."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Charolas para porcionados de pescados y bases para pasteles."
+        }
+      ],
+      "image": "metallized-layette.jpg"
+    },
+    {
+      "data": "packagingten",
+      "title": "Papel (tapas pelables)",
+      "characteristics": [
+        {
+          "characteristic": "Elaborado a base de un couche desde 70 a 150 g."
+        },
+        {
+          "characteristic": "Lleva polietileno con  aditivo termosellante."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "El polietileno con el que se lamina  es FDA, y el laminado es compatible para sellado con poliestireno espumado y rígido."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Material utilizado para la elaboración de tapas pelables."
+        }
+      ],
+      "image": "paper-peelable-tops.jpg"
+    },
+    {
+      "data": "packagingeleven",
+      "title": "Papel filtro para te",
+      "characteristics": [
+        {
+          "characteristic": "Se utiliza  un papel filtro de 19 a 20g y es sellable a una cara."
+        },
+        {
+          "characteristic": "Se entrega en bobinas de anchos pequeños al diámetro requerido."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Material resistente."
+        },
+        {
+          "benefit": "Cumple con lo establecido en la FDA."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Material utilizado para la elaboración de sobres de infusiones."
+        }
+      ],
+      "image": "tea-paper.jpg"
+    },
+    {
+      "data": "packagingtwelve",
+      "title": "Cartones laminados (para vasos, refrigeración, congelación)",
+      "characteristics": [
+        {
+          "characteristic": "Cartones de calibres desde 10 hasta 28 puntos."
+        },
+        {
+          "characteristic": "Materiales utilizados: cartulinas sulfatadas, caple reverso blanco y café, SBS, multicapas y liners."
+        },
+        {
+          "characteristic": "Llevan una laminación con polietileno."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Inocuidad."
+        },
+        {
+          "benefit": "Barrera a la grasa y a la humedad."
+        },
+        {
+          "benefit": "Especialmente para productos que van a congelación o refrigeración."
+        },
+        {
+          "benefit": "Cumplen con lo establecido por la FDA."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Material utilizado para la elaboración de vasos, cajas y empaques que estarán en contacto con líquidos o sólidos en ambientes fríos o calientes."
+        }
+      ],
+      "image": "laminated-cartons.jpg"
+    },
+    {
+      "data": "packagingthirteen",
+      "title": "Bolsa térmica",
+      "characteristics": [
+        {
+          "characteristic": "Materiales utilizados: papel café, papel blanco desde 30 hasta 35g, laminado con foil de aluminio de 6 micras."
+        }
+      ],
+      "benefits": [
+        {
+          "benefit": "Mantiene la temperatura del alimento."
+        },
+        {
+          "benefit": "Ideal para empacar y transportar alimentos."
+        }
+      ],
+      "uses": [
+        {
+          "use": "Bolsa para empacar y transportar alimentos."
+        }
+      ],
+      "image": "thermal-bag.jpg"
+    }
+  ]
+}
