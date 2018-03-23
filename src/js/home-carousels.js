@@ -2,11 +2,13 @@ var coverCarousel = $('.cover-carousel');
 var productsCarousel = $('.products-carousel');
 
 coverCarousel.owlCarousel ({
-  loop: false,
+  loop: true,
   responsiveClass: true,
   nav: true,
   navText: ['<img class="nav-arrows" src="img/icons/left-arrow.png" />', '<img class="nav-arrows" src="img/icons/right-arrow.png" />'],
   dots: true,
+  autoplay: true,
+  autoplayTimeout: 5000,
   responsive: {
     0: {
       items: 1,
@@ -19,7 +21,7 @@ coverCarousel.owlCarousel ({
       1000: {
       items: 1,
       nav: true,
-      loop: false
+      loop: true
     }
   }
 });
