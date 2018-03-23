@@ -11,10 +11,16 @@ gulp.task('build:html', function () {
   return gulp.src(config.paths.src.templates_sections)
     .pipe(data(function (file) {
       var sectionName = file.relative.split('.njk')[0];
+
       return {
         section: sectionName
       }
     }))
+
+    .pipe(data(function() {
+      return require('../src/js/products-data.json')
+    }))
+    
     .pipe(nunjucksRender({
       path: config.paths.src.templates_dir,
       ext: '.html',
