@@ -232,7 +232,7 @@
           "use": "Papel blanco para impresión, laminación y/o corte."
         },
         {
-          "use": "Papel para empaque plotter."
+          "use": "Papel para empaque y plotter."
         }
       ],
       "image": "paper-bond.jpg",
@@ -527,7 +527,7 @@
           "use": "Papel para empaque de resinas."
         }
       ],
-      "image": ""
+      "image": "laminated-paper-sandwich.jpg"
     }
   ],
   "laminations": [
