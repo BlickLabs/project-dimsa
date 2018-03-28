@@ -9,30 +9,13 @@
     <div class="allproducts-container">
       <div class="allproducts-panel-container allproducts-desktop">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="laminatedcartonstwo">
-            <span>cartones laminados por dos caras (Partition)</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="cartonscloth">
-            <span>cartones con tela (nonwoven)</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="soliconepaper">
-            <span>papeles siliconados</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="slippaper">
-            <span>papel antideslizante</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="reinforcedlaminations">
-            <span>laminaciones reforzadas con rafia</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="conductivecartons">
-            <span>cartones conductivos (antiestéticos)</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="slipsheet">
-            <span>slip sheet</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="gorillatape">
-            <span>cinta gorila</span>
-          </li>
+        {% for specialtie in specialties %}
+          <a class="allproducts-scroll" href="#{{specialtie.data}}">
+            <li class="select-option allproducts-option {{specialtie.active}}" data-section="{{specialtie.data}}">
+              <span>{{specialtie.title}}</span>
+            </li>
+          </a>
+        {% endfor %}
         </ul>
       </div>
 
@@ -43,230 +26,47 @@
 
       <div class="allproducts-panel-container allproducts-mobile">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="laminatedcartonstwo">
-            <span>cartones laminados por dos caras (Partition)</span>
-          </li>
+        {% for specialtie in specialties %}
+          <a class="allproducts-scroll" href="#{{specialtie.data}}">
+            <li class="select-option allproducts-option {{specialtie.active}}" data-section="{{specialtie.data}}">
+              <span>{{specialtie.title}}</span>
+            </li>
+          </a>
           <div class="info-selected-option-container">
-            <div class="laminatedcartonstwo info-selected-option allproducts-content active">
+            <div class="{{specialtie.data}} info-selected-option allproducts-content {{specialtie.active}}" id="{{specialtie.data}}">
               <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+                <div class="allproducts-product-title-container">
+                  <h2 class="allproducts-product-title">{{specialtie.title}}</h2>
                 </div>
-                <span class="allproducts-description">Para caja plegadiza de producto alimenticio, divisores para frascos de vidrio.</span>
+                <div class="allproducts-subtitle-container">
+                  <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+                </div>
+                {% for characteristic in specialtie.characteristics %}
+                <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+                  <h2 class="allproducts-subtitle">Beneficios</h2>
                 </div>
-                <span class="allproducts-description">Resistente al congelamiento.</span>
+                {% for benefit in specialtie.benefits %}
+                <span class="allproducts-description">{{benefit.benefit}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
+                  <h2 class="allproducts-subtitle">Usos</h2>
                 </div>
-                <span class="allproducts-description">Se fabrica con cartones de 22 a 40 puntos.</span>
+                {% for use in specialtie.uses %}
+                <span class="allproducts-description">{{use.use}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/laminated-cartonstwo.jpg">
+                <img class="allproducts-img" src="img/allproducts/specialties/{{specialtie.image}}">
               </div>
             </div>
           </div>
-          <li class="select-option allproducts-option" data-section="cartonscloth">
-            <span>cartones con tela (nonwoven)</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="cartonscloth info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Utilizado para divisores de frascos de vidrio.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Protege piezas delicadas y la tela evita que el material se maltrate o se raye.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Se fabrican con cartones de 40 puntos y una tela de 50g.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/cartons-cloth.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="soliconepaper">
-            <span>papeles siliconados</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="soliconepaper info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Papeles reliz papel que protege el adhesivo.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Le da propiedades antihaderentes el silicón. Pueden ser siliconados a 1 o 2 caras.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Papel de 67g por 1 y dos caras siliconado.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/silicone-paper.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="slippaper">
-            <span>papel antideslizante</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="slippaper info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Separadores para evitar el movimiento de cajas.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Son laminaciones con polietileno mezcladas con adhitivo anti deslizante.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Papel de 100g laminado con adhitivo antideslizante.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/slip-paper.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="reinforcedlaminations">
-            <span>laminaciones reforzadas con rafia</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="reinforcedlaminations info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Material de empaque y embalaje.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">La rafia es de polietileno y el laminado les da alta resistencia a la tensión.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Laminaciones con diversos sustratos con rafia de polietileno de 58g.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/reinforced-laminations.jpg">
-              </div>
-            </div>
-          </div>
-           <li class="select-option allproducts-option" data-section="conductivecartons">
-            <span>cartones conductivos (antiestéticos)</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="conductivecartons info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Divisores para circuitos.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Es conductivo.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Cartones de 40 puntos, impreso en plasta negra.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/conductive-cartons.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="slipsheet">
-            <span>slip sheet</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="slipsheet info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Tarimas deslizables.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Sustituyen a una tarima de madera.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Un papel Linner de 275 y un Poliéster transparente de 23 micras.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/slip-sheets.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="gorillatape">
-            <span>cinta gorila</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="gorillatape info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Cierra cajas de una manera limpia y mucho más segura que una cinta convencional.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Fácil de aplicar adhesión extrema pega cajas de cartón empolvadas.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Es una cinta de papel reforzada con una malla de fibra de vidrio, el cual está impregnado con un adhesivo rehumectable.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/specialties/gorilla-tape.jpg">
-              </div>
-            </div>
-          </div>
+        {% endfor %}
         </ul>
       </div>
 
@@ -275,190 +75,40 @@
           <h1 class="allproducts-title helvetica-neue-bold">Especialidades</h1>
           <div class="red-decorator"></div>
         </div>
-        <div class="laminatedcartonstwo info-selected-option allproducts-content active">
+      {% for specialtie in specialties %}
+        <div class="{{specialtie.data}} info-selected-option allproducts-content {{specialtie.active}}" id="{{specialtie.data}}">
           <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+            <div class="allproducts-product-title-container">
+              <h2 class="allproducts-product-title">{{specialtie.title}}</h2>
             </div>
-            <span class="allproducts-description">Para caja plegadiza de producto alimenticio, divisores para frascos de vidrio.</span>
+            <div class="allproducts-subtitle-container">
+              <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+            </div>
+            {% for characteristic in specialtie.characteristics %}
+            <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+              <h2 class="allproducts-subtitle">Beneficios</h2>
             </div>
-            <span class="allproducts-description">Resistente al congelamiento.</span>
+            {% for benefit in specialtie.benefits %}
+            <span class="allproducts-description">{{benefit.benefit}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
+              <h2 class="allproducts-subtitle">Usos</h2>
             </div>
-            <span class="allproducts-description">Se fabrica con cartones de 22 a 40 puntos.</span>
+            {% for use in specialtie.uses %}
+            <span class="allproducts-description">{{use.use}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/laminated-cartonstwo.jpg">
+            <img class="allproducts-img" src="img/allproducts/specialties/{{specialtie.image}}">
           </div>
         </div>
-        <div class="cartonscloth info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Utilizado para divisores de frascos de vidrio.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Protege piezas delicadas y la tela evita que el material se maltrate o se raye.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Se fabrican con cartones de 40 puntos y una tela de 50g.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/cartons-cloth.jpg">
-          </div>
-        </div>
-        <div class="soliconepaper info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Papeles reliz papel que protege el adhesivo.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Le da propiedades antihaderentes el silicón. Pueden ser siliconados a 1 o 2 caras.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Papel de 67g por 1 y dos caras siliconado.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/silicone-paper.jpg">
-          </div>
-        </div>
-        <div class="slippaper info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Separadores para evitar el movimiento de cajas.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Son laminaciones con polietileno mezcladas con adhitivo anti deslizante.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Papel de 100g laminado con adhitivo antideslizante.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/slip-paper.jpg">
-          </div>
-        </div>
-        <div class="reinforcedlaminations info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Material de empaque y embalaje.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">La rafia es de polietileno y el laminado les da alta resistencia a la tensión.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Laminaciones con diversos sustratos con rafia de polietileno de 58g.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/reinforced-laminations.jpg">
-          </div>
-        </div>
-        <div class="conductivecartons info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Divisores para circuitos.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Es conductivo.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Cartones de 40 puntos, impreso en plasta negra.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/conductive-cartons.jpg">
-          </div>
-        </div>
-        <div class="slipsheet info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Tarimas deslizables.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Sustituyen a una tarima de madera.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Un papel Linner de 275 y un Poliéster transparente de 23 micras.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/slip-sheets.jpg">
-          </div>
-        </div>
-        <div class="gorillatape info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Cierra cajas de una manera limpia y mucho más segura que una cinta convencional.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Fácil de aplicar adhesión extrema pega cajas de cartón empolvadas.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Es una cinta de papel reforzada con una malla de fibra de vidrio, el cual está impregnado con un adhesivo rehumectable.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/specialties/gorilla-tape.jpg">
-          </div>
-        </div>
+      {% endfor %}
       </div>
     </div>
   </div>

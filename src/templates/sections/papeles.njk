@@ -9,33 +9,13 @@
     <div class="allproducts-container">
       <div class="allproducts-panel-container allproducts-desktop">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="bond">
-            <span>bond</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="kraft">
-            <span>kraft</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="linner">
-            <span>linner</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="medium">
-            <span>medium</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="polibond">
-            <span>polibond</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="polikraft">
-            <span>polikraft</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="poliglassine">
-            <span>poliglassine</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="polilinner">
-            <span>polilinner</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="polipet">
-            <span>polipet</span>
-          </li>
+        {% for paper in papers %}
+          <a class="allproducts-scroll" href="#{{paper.data}}">
+            <li class="select-option allproducts-option {{paper.active}}" data-section="{{paper.data}}">
+              <span>{{paper.title}}</span>
+            </li>
+          </a>
+        {% endfor %}
         </ul>
       </div>
 
@@ -46,262 +26,47 @@
 
       <div class="allproducts-panel-container allproducts-mobile">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="bond">
-            <span>bond</span>
-          </li>
+        {% for paper in papers %}
+          <a class="allproducts-scroll" href="#{{paper.data}}">
+            <li class="select-option allproducts-option {{paper.active}}" data-section="{{paper.data}}">
+              <span>{{paper.title}}</span>
+            </li>
+          </a>
           <div class="info-selected-option-container">
-            <div class="allproducts-title-container allproducts-desktop">
-              <h1 class="allproducts-title helvetica-neue-bold">Papeles y películas laminadas</h1>
-              <div class="red-decorator"></div>
-            </div>
-            <div class="bond info-selected-option allproducts-content active">
+            <div class="{{paper.data}} info-selected-option allproducts-content {{paper.active}}" id="{{paper.data}}">
               <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+                <div class="allproducts-product-title-container">
+                  <h2 class="allproducts-product-title">{{paper.title}}</h2>
                 </div>
-                <span class="allproducts-description">Papel para impresión, papel para empaque, plotter, laminación, impresión y corte.</span>
+                <div class="allproducts-subtitle-container">
+                  <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+                </div>
+                {% for characteristic in paper.characteristics %}
+                <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+                  <h2 class="allproducts-subtitle">Beneficios</h2>
                 </div>
-                <span class="allproducts-description">Papel Nacional, es imprimible, buena blancura, buena capacidad.</span>
+                {% for benefit in paper.benefits %}
+                <span class="allproducts-description">{{benefit.benefit}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
+                  <h2 class="allproducts-subtitle">Usos</h2>
                 </div>
-                <span class="allproducts-description">Desde 30g hasta 120g.</span>
+                {% for use in paper.uses %}
+                <span class="allproducts-description">{{use.use}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-bond.jpg">
+                <img class="allproducts-img" src="img/allproducts/papers/{{paper.image}}">
               </div>
             </div>
           </div>
-          <li class="select-option allproducts-option" data-section="kraft">
-            <span>kraft</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="kraft info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Utilizado para empaque, separadores, embalaje.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Papel Nacional, material con encolado, resistente a la humedad se puede entregar en bobina u hojas.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Desde 32g hasta 90g y 130 gr.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-kraft.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="linner">
-            <span>linner</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="linner info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Separadores y divisores para circuitos electrónicos.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Papel Nacional, material con encolado, resistente a la humedad, se puede entregar en bobina u hojas.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Desde 140g hasta 500g.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-linner.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="medium">
-            <span>medium</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="medium info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Materiales para separadores.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Papel Nacional, se entrega en bobina u hoja.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Desde 100g hasta 700g.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-medium.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="polibond">
-            <span>polibond</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="polibond info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Fabricación de estuchados o bolsas para envasar equipo de curación o alimentos.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">30 a 120g y va laminado con una película de polietileno de baja densidad LDPE laminado FDA y se puede cortar en rollos de anchos y diámetros diferentes.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-polibond.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="polikraft">
-            <span>polikraft</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="polikraft info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Papel para empaque laminado 1 cara.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">30 a 90 y 130g y va laminado con una película de polietileno de baja densidad LDPE laminado FDA y se puede cortar en bobinas y hojas de diferentes tamaños.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-polikraft.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="poliglassine">
-            <span>poliglassine</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="poliglassine info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Fabricación de estuchados o bolsas para envasar equipo de curación o alimentos.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">glassine de 40g con una película de polietileno de 14g o con una película de surlyn de 1g.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-polibond.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="polilinner">
-            <span>polilinner</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="polilinner info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Separadores y divisores para latas de aceite o perfume.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">140 a 500g su laminacion es FDA puede ser desde 12 hasta 40g el acabado del plástico puede ser mate o brillante y se puede entregar en bobinas y hojas de diferentes medidas.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-polilinner.png">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="polipet">
-            <span>polipet</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="polipet info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Utilizado como empaque flexible, envasado de productos alimenticios, fabricación de bolsas de sellado hermético a calor y presión.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Constituido por una película de poliéster transparente de 23 micras con una película de polietileno (FDA).</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/papers/paper-polipet.jpg">
-              </div>
-            </div>
-          </div>
+        {% endfor %}
         </ul>
       </div>
 
@@ -310,213 +75,40 @@
           <h1 class="allproducts-title helvetica-neue-bold">Papeles y películas laminadas</h1>
           <div class="red-decorator"></div>
         </div>
-        <div class="bond info-selected-option allproducts-content active">
+      {% for paper in papers %}
+        <div class="{{paper.data}} info-selected-option allproducts-content {{paper.active}}" id="{{paper.data}}">
           <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+            <div class="allproducts-product-title-container">
+              <h2 class="allproducts-product-title">{{paper.title}}</h2>
             </div>
-            <span class="allproducts-description">Papel para impresión, papel para empaque, plotter, laminación, impresión y corte.</span>
+            <div class="allproducts-subtitle-container">
+              <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+            </div>
+            {% for characteristic in paper.characteristics %}
+            <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+              <h2 class="allproducts-subtitle">Beneficios</h2>
             </div>
-            <span class="allproducts-description">Papel Nacional, es imprimible, buena blancura, buena capacidad.</span>
+            {% for benefit in paper.benefits %}
+            <span class="allproducts-description">{{benefit.benefit}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
+              <h2 class="allproducts-subtitle">Usos</h2>
             </div>
-            <span class="allproducts-description">Desde 30g hasta 120g.</span>
+            {% for use in paper.uses %}
+            <span class="allproducts-description">{{use.use}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-bond.jpg">
+            <img class="allproducts-img" src="img/allproducts/papers/{{paper.image}}">
           </div>
         </div>
-        <div class="kraft info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Utilizado para empaque, separadores, embalaje.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Papel Nacional, material con encolado, resistente a la humedad se puede entregar en bobina u hojas.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Desde 32g hasta 90g y 130 gr.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-kraft.jpg">
-          </div>
-        </div>
-        <div class="linner info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Separadores y divisores para circuitos electrónicos.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Papel Nacional, material con encolado, resistente a la humedad, se puede entregar en bobina u hojas.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Desde 140g hasta 500g.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-linner.jpg">
-          </div>
-        </div>
-        <div class="medium info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Materiales para separadores.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Papel Nacional, se entrega en bobina u hoja.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Desde 100g hasta 700g.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-medium.jpg">
-          </div>
-        </div>
-        <div class="polibond info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Fabricación de estuchados o bolsas para envasar equipo de curación o alimentos.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">30 a 120g y va laminado con una película de polietileno de baja densidad LDPE laminado FDA y se puede cortar en rollos de anchos y diámetros diferentes.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-polibond.jpg">
-          </div>
-        </div>
-        <div class="polikraft info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Papel para empaque laminado 1 cara.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">30 a 90 y 130g y va laminado con una película de polietileno de baja densidad LDPE laminado FDA y se puede cortar en bobinas y hojas de diferentes tamaños.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-polikraft.jpg">
-          </div>
-        </div>
-        <div class="poliglassine info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Fabricación de estuchados o bolsas para envasar equipo de curación o alimentos.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">glassine de 40g con una película de polietileno de 14g o con una película de surlyn de 1g.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-polibond.jpg">
-          </div>
-        </div>
-        <div class="polilinner info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Separadores y divisores para latas de aceite o perfume.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">140 a 500g su laminacion es FDA puede ser desde 12 hasta 40g el acabado del plástico puede ser mate o brillante y se puede entregar en bobinas y hojas de diferentes medidas.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-polilinner.png">
-          </div>
-        </div>
-        <div class="polipet info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Utilizado como empaque flexible, envasado de productos alimenticios, fabricación de bolsas de sellado hermético a calor y presión.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Inocuidad, barreras a la humedad, termosellable, barrera a la grasa, material nacional. En el Polipet el poliéster utilizado cuena con tratamiento químico que garantiza una buena pintabilidad. Los materiales se pueden entregar con o sin impresión.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Constituido por una película de poliéster transparente de 23 micras con una película de polietileno (FDA).</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/papers/paper-polipet.jpg">
-          </div>
-        </div>
+      {% endfor %}
       </div>
     </div>
   </div>

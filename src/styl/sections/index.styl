@@ -12,7 +12,11 @@
     background-image url("../img/backgrounds/home-carousel-2.jpg")
 
   &-three
-    background-image url("../img/backgrounds/home-carousel-3.jpg")
+    background-image url("../img/backgrounds/home-carousel-3.png")
+    background-size auto 80% !important
+
+  &-four
+    background-image url("../img/backgrounds/home-carousel-4.jpg")
 
 .home
   &-cover
@@ -39,6 +43,9 @@
       color $dWhite
       font-size $font45
       letter-spacing 0.3px
+
+      &-container
+        margin-bottom 40px
 
     &-description
       color $dWhite
@@ -358,6 +365,11 @@
 @media screen and (max-width 786px)
   .cover-carousel
     padding-right 0
+
+  .cover
+    &-three
+      background-size 166% !important;
+      background-position center left 35% !important
 
   .home
     &-cover

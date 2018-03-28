@@ -9,18 +9,13 @@
     <div class="allproducts-container">
       <div class="allproducts-panel-container allproducts-desktop">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="bondpolifoil">
-            <span>bondpolifoil</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="kraftpolifoil">
-            <span>kraftpolifoil</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="glasspolifoil">
-            <span>glasspolifoil</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="petpolifoil">
-            <span>petpolifoil</span>
-          </li>
+        {% for lamination in laminations %}
+          <a class="allproducts-scroll" href="#{{lamination.data}}">
+            <li class="select-option allproducts-option {{lamination.active}}" data-section="{{lamination.data}}">
+              <span>{{lamination.title}}</span>
+            </li>
+          </a>
+        {% endfor %}
         </ul>
       </div>
 
@@ -31,118 +26,47 @@
 
       <div class="allproducts-panel-container allproducts-mobile">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="bondpolifoil">
-            <span>bondpolifoil</span>
-          </li>
+        {% for lamination in laminations %}
+          <a class="allproducts-scroll" href="#{{lamination.data}}">
+            <li class="select-option allproducts-option {{lamination.active}}" data-section="{{lamination.data}}">
+              <span>{{lamination.title}}</span>
+            </li>
+          </a>
           <div class="info-selected-option-container">
-            <div class="bondpolifoil info-selected-option allproducts-content active">
+            <div class="{{lamination.data}} info-selected-option allproducts-content {{lamination.active}}" id="{{lamination.data}}">
               <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+                <div class="allproducts-product-title-container">
+                  <h2 class="allproducts-product-title">{{lamination.title}}</h2>
                 </div>
-                <span class="allproducts-description">Fabricación de estuchados de sellado hermético productos en polvo, líquido, grano.</span>
+                <div class="allproducts-subtitle-container">
+                  <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+                </div>
+                {% for characteristic in lamination.characteristics %}
+                <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+                  <h2 class="allproducts-subtitle">Beneficios</h2>
                 </div>
-                <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz.</span>
+                {% for benefit in lamination.benefits %}
+                <span class="allproducts-description">{{benefit.benefit}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
+                  <h2 class="allproducts-subtitle">Usos</h2>
                 </div>
-                <span class="allproducts-description">Está conformado por un papel de 40g laminado con LDPE con un foil de aluminio de 6 micras y la cara sellable puede ser con polietileno o con surley.</span>
+                {% for use in lamination.uses %}
+                <span class="allproducts-description">{{use.use}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/laminations/bondpolifoil.jpg">
+                <img class="allproducts-img" src="img/allproducts/laminations/{{lamination.image}}">
               </div>
             </div>
           </div>
-          <li class="select-option allproducts-option" data-section="kraftpolifoil">
-            <span>kraftpolifoil</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="kraftpolifoil info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Caja incinerable.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Papel de 160g se utiliza aluminio de 6 micras y es para caja incinerable </span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/laminations/kraftpolifoil.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="glasspolifoil">
-            <span>glasspolifoil</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="glasspolifoil info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Fabricación de estuchados de sellado hermético productos en polvo, líquido, grano.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Está conformado por un papel de 40g laminado con LDPE con un foil de aluminio de 6 micras y la cara sellable puede ser con polietileno o con surley </span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/laminations/bondpolifoil.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="petpolifoil">
-            <span>petpolifoil</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="petpolifoil info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Para la fabricación de envases flexibles, bolsas selladas a calor y presión de diferentes tamaños (Pouchs), para productos alimenticios, farmaceúticos, cosméticos, de caducidad prolongada.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz. Y tratamiento químico en el poliéster.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">poliéster de 23 micras transparente o metalizado polietileno aluminio de 6 micras y en la cara del sellado puede llevar polietileno o surley.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/laminations/petpolifoil.jpg">
-              </div>
-            </div>
-          </div>
+        {% endfor %}
         </ul>
       </div>
 
@@ -151,98 +75,40 @@
           <h1 class="allproducts-title helvetica-neue-bold">Laminaciones con aluminio</h1>
           <div class="red-decorator"></div>
         </div>
-        <div class="bondpolifoil info-selected-option allproducts-content active">
+      {% for lamination in laminations %}
+        <div class="{{lamination.data}} info-selected-option allproducts-content {{lamination.active}}" id="{{lamination.data}}">
           <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+            <div class="allproducts-product-title-container">
+              <h2 class="allproducts-product-title">{{lamination.title}}</h2>
             </div>
-            <span class="allproducts-description">Fabricación de estuchados de sellado hermético productos en polvo, líquido, grano.</span>
+            <div class="allproducts-subtitle-container">
+              <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+            </div>
+            {% for characteristic in lamination.characteristics %}
+            <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+              <h2 class="allproducts-subtitle">Beneficios</h2>
             </div>
-            <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz.</span>
+            {% for benefit in lamination.benefits %}
+            <span class="allproducts-description">{{benefit.benefit}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
+              <h2 class="allproducts-subtitle">Usos</h2>
             </div>
-            <span class="allproducts-description">Está conformado por un papel de 40g laminado con LDPE con un foil de aluminio de 6 micras y la cara sellable puede ser con polietileno o con surley.</span>
+            {% for use in lamination.uses %}
+            <span class="allproducts-description">{{use.use}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/laminations/bondpolifoil.jpg">
+            <img class="allproducts-img" src="img/allproducts/laminations/{{lamination.image}}">
           </div>
         </div>
-        <div class="kraftpolifoil info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Caja incinerable.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Papel de 160g se utiliza aluminio de 6 micras y es para caja incinerable </span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/laminations/kraftpolifoil.jpg">
-          </div>
-        </div>
-        <div class="glasspolifoil info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Fabricación de estuchados de sellado hermético productos en polvo, líquido, grano.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Está conformado por un papel de 40g laminado con LDPE con un foil de aluminio de 6 micras y la cara sellable puede ser con polietileno o con surley </span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/laminations/bondpolifoil.jpg">
-          </div>
-        </div>
-        <div class="petpolifoil info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Para la fabricación de envases flexibles, bolsas selladas a calor y presión de diferentes tamaños (Pouchs), para productos alimenticios, farmaceúticos, cosméticos, de caducidad prolongada.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Laminación con aluminio barrera a la oxigenación y a la luz. Y tratamiento químico en el poliéster.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">poliéster de 23 micras transparente o metalizado polietileno aluminio de 6 micras y en la cara del sellado puede llevar polietileno o surley.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/laminations/petpolifoil.jpg">
-          </div>
-        </div>
+      {% endfor %}
       </div>
     </div>
   </div>

@@ -9,42 +9,13 @@
     <div class="allproducts-container">
       <div class="allproducts-panel-container allproducts-desktop">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="waxpaper">
-            <span>papel encerado</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="laminatedpaper">
-            <span>papel laminado</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="thermalwrapping">
-            <span>papel envoltura térmica para comida</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="tortillapaper">
-            <span>papel para tortilla</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="hamburgerbox">
-            <span>caja para hamburguesa</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="paperboardlayette">
-            <span>charolas / canastillas de cartón para comida</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="metallizedlayette">
-            <span>Charola metalizada para pescado o pasteleras</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="paleablestops">
-            <span>tapas paleables</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="teapaper">
-            <span>papel filtro para té</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="laminatedcartons">
-            <span>cartones laminados (vasos, refrigeración, congelación)</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="antigreasepaper">
-            <span>papeles antigrasa</span>
-          </li>
-          <li class="select-option allproducts-option" data-section="thermalbag">
-            <span>bolsa térmica</span>
-          </li>
+        {% for packaging in packagings %}
+          <a class="allproducts-scroll" href="#{{packaging.data}}">
+            <li class="select-option allproducts-option {{packaging.active}}" data-section="{{packaging.data}}">
+              <span>{{packaging.title}}</span>
+            </li>
+          </a>
+        {% endfor %}
         </ul>
       </div>
 
@@ -55,379 +26,47 @@
 
       <div class="allproducts-panel-container allproducts-mobile">
         <ul class="select-option-container allproducts-option-container helvetica-neue-bold">
-          <li class="select-option allproducts-option active" data-section="waxpaper">
-            <span>papel encerado</span>
-          </li>
+        {% for packaging in packagings %}
+          <a class="allproducts-scroll" href="#{{packaging.data}}">
+            <li class="select-option allproducts-option {{packaging.active}}" data-section="{{packaging.data}}">
+              <span>{{packaging.title}}</span>
+            </li>
+          </a>
           <div class="info-selected-option-container">
-            <div class="waxpaper info-selected-option allproducts-content active">
+            <div class="{{packaging.data}} info-selected-option allproducts-content {{packaging.active}}" id="{{packaging.data}}">
               <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+                <div class="allproducts-product-title-container">
+                  <h2 class="allproducts-product-title">{{packaging.title}}</h2>
                 </div>
-                <span class="allproducts-description">Utilizado para envolver alimentos.</span><br>
-                <span class="allproducts-description">Ideal para servir alimentos de comida rápida.</span>
+                <div class="allproducts-subtitle-container">
+                  <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+                </div>
+                {% for characteristic in packaging.characteristics %}
+                <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+                  <h2 class="allproducts-subtitle">Beneficios</h2>
                 </div>
-                <span class="allproducts-description">Resistente a la grasa y a la humedad.</span><br>
-                <span class="allproducts-description">Facilidad de envolver cualquier alimento.</span>
+                {% for benefit in packaging.benefits %}
+                <span class="allproducts-description">{{benefit.benefit}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-info-container">
                 <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
+                  <h2 class="allproducts-subtitle">Usos</h2>
                 </div>
-                <span class="allproducts-description">Se utilizan papeles bond grado alimenticio de 30 a 75g.</span><br>
-                <span class="allproducts-description">Los materiales se pueden entregar  con o sin impresión.</span><br>
-                <span class="allproducts-description">Los materiales se pueden entregar  con o sin impresión.</span>
+                {% for use in packaging.uses %}
+                <span class="allproducts-description">{{use.use}}</span><br>
+                {% endfor %}
               </div>
               <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/wax-paper.jpg">
+                <img class="allproducts-img" src="img/allproducts/packaging/{{packaging.image}}">
               </div>
             </div>
           </div>
-          <li class="select-option allproducts-option" data-section="laminatedpaper">
-            <span>papel laminado</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="laminatedpaper info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Utilizado para la fabricación de  envolturas  para ensobretar polvos, empaques de gasas y colorantes.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Inocuidad.</span><br>
-                <span class="allproducts-description">Termosellable.</span><br>
-                <span class="allproducts-description">Barrera a la grasa y a la humedad.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Son papeles de 30 hasta 120g con una capa de polietileno de baja densidad (LDPE).</span><br>
-                <span class="allproducts-description">Los materiales se pueden entregar con o sin impresión.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/laminated-paper.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="thermalwrapping">
-            <span>papel envoltura térmica para comida</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="thermalwrapping info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Envoltura para alimentos de comida rápida.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Mantiene la temperatura de los alimentos.</span><br>
-                <span class="allproducts-description">Se adapta a la forma de los alimentos.</span><br>
-                <span class="allproducts-description">Cumple con lo establecido por la FDA.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Papel de 30 a 75 g.</span><br>
-                <span class="allproducts-description">Laminado con foil de aluminio de 6 micras.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/thermal-wrapping.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="tortillapaper">
-            <span>papel para tortilla</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="tortillapaper info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Empaque  para tortilla.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Es un papel grado alimenticio  que cumple con lo establecido por la FDA.</span><br>
-                <span class="allproducts-description">Resistente a la humedad y a la grasa.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Papel blanco o kraft con o sin polietileno.</span><br>
-                <span class="allproducts-description">Papel biodegradable.</span><br>
-                <span class="allproducts-description">Impresión hasta 5 colores.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/tortilla-paper.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="hamburgerbox">
-            <span>caja para hamburguesa</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="hamburgerbox info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Caja plegadiza ideal para empacar y transportar alimentos a domicilio.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Hace una barrera contra la grasa y humedad.</span><br>
-                <span class="allproducts-description">Materiales que cumplen con lo establecido por la FDA.</span><br>
-                <span class="allproducts-description">Mantiene el alimento en buenas condiciones.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Materiales más utilizados caple reverso blanco y café, multicapa y SBS.</span><br>
-                <span class="allproducts-description">Se manejan en calibres de 12  hasta 28 puntos.</span><br>
-                <span class="allproducts-description">Ancho máximo  de una caja 96 cm.</span><br>
-                <span class="allproducts-description">Largo máximo de una caja 54 cm.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/hamburger-box.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="paperboardlayette">
-            <span>charolas / canastillas de cartón para comida</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="paperboardlayette info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Canastillas utilizadas para comida rápida.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Sustituyen a las charolas de poliestireno.</span><br>
-                <span class="allproducts-description">Hace una barrera contra la humedad y la grasa de los alimentos.</span><br>
-                <span class="allproducts-description">Son ideales para empacar y transportar alimentos.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Materiales más utilizados capple reverso blanco y café, multicapa y SBS.</span><br>
-                <span class="allproducts-description">Se manejan en calibres de 16  hasta 28 puntos</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/paperboard-layette.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="metallizedlayette">
-            <span>Charola metalizada para pescado o pasteleras</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="metallizedlayette info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Charola para porcionados de pescados y base para pasteles.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">La charola tiene rigidez y diferentes  tamaños de acuerdo a la porción que se va a empacar.</span><br>
-                <span class="allproducts-description">Materiales que cumplen con lo establecido por la FDA.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Compuestas  de dos cartulinas de 18 puntos ambas caras llevan poliéster metalizado.</span><br>
-                <span class="allproducts-description">En colores oro o plata.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/metallized-layette.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="paleablestops">
-            <span>tapas paleables</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="paleablestops info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Material utilizado para la elaboración de tapas pelables.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">El polietileno con el que se lamina es DSA, y el laminado es compatible para sellado con poliestireno espumado y rígido.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Elaborado a base de un couché  desde 70 a 100g.</span><br>
-                <span class="allproducts-description">Lleva polietileno con aditivo termosellante.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/laminated-paper.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="teapaper">
-            <span>papel filtro para té</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="teapaper info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Material utilizado para la elaboración de sobre de infusiones.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Material resistente.</span><br>
-                <span class="allproducts-description">Cumple con lo establecido por la FDA.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Se utiliza un papel filtro  de 19 a 20g y es sellable a una cara.</span><br>
-                <span class="allproducts-description">Se entregan en bobinas de anchos pequeños al diámetro requerido.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/tea-paper.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="laminatedcartons">
-            <span>cartones laminados (vasos, refrigeración, congelación)</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="laminatedcartons info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Material utilizado para la elaboración de vasos.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Inocuidad.</span><br>
-                <span class="allproducts-description">Barrera a la grasa y a la humedad.</span><br>
-                <span class="allproducts-description">Especialmente para productos  que van a congelación o refrigeración.</span><br>
-                <span class="allproducts-description">Cumplen con lo establecido por la FDA.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Cartones de calibres desde 10 hasta 28 puntos.</span><br>
-                <span class="allproducts-description">Materiales utilizados; cartulinas sulfatadas, SBS, caples, multicapas y liners.</span><br>
-                <span class="allproducts-description">Llevan una laminación con polietileno.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/laminated-cartons.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="antigreasepaper">
-            <span>papeles antigrasa</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="antigreasepaper info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Papel envoltura para alimentos grasos (mantequilla).</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Es resistente a la grasa y humedad.</span><br>
-                <span class="allproducts-description">No altera el sabor del producto.</span><br>
-                <span class="allproducts-description">Los materiales empleados en su fabricación, cumplen con lo establecido por la FDA.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Es un papel blanco con tonalidad cremosa</span><br>
-                <span class="allproducts-description">Puede ser entregado con o sin impresión.</span><br>
-                <span class="allproducts-description">Entregado en boninas o en hojas.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/antigrease-paper.jpg">
-              </div>
-            </div>
-          </div>
-          <li class="select-option allproducts-option" data-section="thermalbag">
-            <span>bolsa térmica</span>
-          </li>
-          <div class="info-selected-option-container">
-            <div class="thermalbag info-selected-option allproducts-content">
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-                </div>
-                <span class="allproducts-description">Bolsa para guardar alimentos.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-                </div>
-                <span class="allproducts-description">Mantiene la temperatura del alimento que se deseen  guardar.</span><br>
-                <span class="allproducts-description">Ideal para empacar y transportar alimentos.</span>
-                <span class="allproducts-description">Materiales biodegradables.</span>
-              </div>
-              <div class="allproducts-info-container">
-                <div class="allproducts-subtitle-container">
-                  <h2 class="allproducts-subtitle">Características</h2>
-                </div>
-                <span class="allproducts-description">Materiales utilizados papel kraft, papel blanco desde 30 hasta 35g, laminado con foil de aluminio de 6 micras.</span>
-              </div>
-              <div class="allproducts-img-container">
-                <img class="allproducts-img" src="img/allproducts/packaging/thermal-bag.jpg">
-              </div>
-            </div>
-          </div>
+        {% endfor %}
         </ul>
       </div>
 
@@ -436,319 +75,40 @@
           <h1 class="allproducts-title helvetica-neue-bold">Empaques alimenticios</h1>
           <div class="red-decorator"></div>
         </div>
-        <div class="waxpaper info-selected-option allproducts-content active">
+      {% for packaging in packagings %}
+        <div class="{{packaging.data}} info-selected-option allproducts-content {{packaging.active}}" id="{{packaging.data}}">
           <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
+            <div class="allproducts-product-title-container">
+              <h2 class="allproducts-product-title">{{packaging.title}}</h2>
             </div>
-            <span class="allproducts-description">Utilizado para envolver alimentos.</span><br>
-            <span class="allproducts-description">Ideal para servir alimentos de comida rápida.</span>
+            <div class="allproducts-subtitle-container">
+              <h2 class="allproducts-subtitle helvetica-neue-bold">Características</h2>
+            </div>
+            {% for characteristic in packaging.characteristics %}
+            <span class="allproducts-description">{{characteristic.characteristic}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
+              <h2 class="allproducts-subtitle">Beneficios</h2>
             </div>
-            <span class="allproducts-description">Resistente a la grasa y a la humedad.</span><br>
-            <span class="allproducts-description">Facilidad de envolver cualquier alimento.</span>
+            {% for benefit in packaging.benefits %}
+            <span class="allproducts-description">{{benefit.benefit}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-info-container">
             <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
+              <h2 class="allproducts-subtitle">Usos</h2>
             </div>
-            <span class="allproducts-description">Se utilizan papeles bond grado alimenticio de 30 a 75g.</span><br>
-            <span class="allproducts-description">Los materiales se pueden entregar  con o sin impresión.</span><br>
-            <span class="allproducts-description">Los materiales se pueden entregar  con o sin impresión.</span>
+            {% for use in packaging.uses %}
+            <span class="allproducts-description">{{use.use}}</span><br>
+            {% endfor %}
           </div>
           <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/wax-paper.jpg">
+            <img class="allproducts-img" src="img/allproducts/packaging/{{packaging.image}}">
           </div>
         </div>
-        <div class="laminatedpaper info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Utilizado para la fabricación de  envolturas  para ensobretar polvos, empaques de gasas y colorantes.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Inocuidad.</span><br>
-            <span class="allproducts-description">Termosellable.</span><br>
-            <span class="allproducts-description">Barrera a la grasa y a la humedad.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Son papeles de 30 hasta 120g con una capa de polietileno de baja densidad (LDPE).</span><br>
-            <span class="allproducts-description">Los materiales se pueden entregar con o sin impresión.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/laminated-paper.jpg">
-          </div>
-        </div>
-        <div class="thermalwrapping info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Envoltura para alimentos de comida rápida.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Mantiene la temperatura de los alimentos.</span><br>
-            <span class="allproducts-description">Se adapta a la forma de los alimentos.</span><br>
-            <span class="allproducts-description">Cumple con lo establecido por la FDA.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Papel de 30 a 75 g.</span><br>
-            <span class="allproducts-description">Laminado con foil de aluminio de 6 micras.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/thermal-wrapping.jpg">
-          </div>
-        </div>
-        <div class="tortillapaper info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Empaque  para tortilla.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Es un papel grado alimenticio  que cumple con lo establecido por la FDA.</span><br>
-            <span class="allproducts-description">Resistente a la humedad y a la grasa.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Papel blanco o kraft con o sin polietileno.</span><br>
-            <span class="allproducts-description">Papel biodegradable.</span><br>
-            <span class="allproducts-description">Impresión hasta 5 colores.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/tortilla-paper.jpg">
-          </div>
-        </div>
-        <div class="hamburgerbox info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Caja plegadiza ideal para empacar y transportar alimentos a domicilio.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Hace una barrera contra la grasa y humedad.</span><br>
-            <span class="allproducts-description">Materiales que cumplen con lo establecido por la FDA.</span><br>
-            <span class="allproducts-description">Mantiene el alimento en buenas condiciones.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Materiales más utilizados caple reverso blanco y café, multicapa y SBS.</span><br>
-            <span class="allproducts-description">Se manejan en calibres de 12  hasta 28 puntos.</span><br>
-            <span class="allproducts-description">Ancho máximo  de una caja 96 cm.</span><br>
-            <span class="allproducts-description">Largo máximo de una caja 54 cm.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/hamburger-box.jpg">
-          </div>
-        </div>
-        <div class="paperboardlayette info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Canastillas utilizadas para comida rápida.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Sustituyen a las charolas de poliestireno.</span><br>
-            <span class="allproducts-description">Hace una barrera contra la humedad y la grasa de los alimentos.</span><br>
-            <span class="allproducts-description">Son ideales para empacar y transportar alimentos.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Materiales más utilizados capple reverso blanco y café, multicapa y SBS.</span><br>
-            <span class="allproducts-description">Se manejan en calibres de 16  hasta 28 puntos</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/paperboard-layette.jpg">
-          </div>
-        </div>
-        <div class="metallizedlayette info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Charola para porcionados de pescados y base para pasteles.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">La charola tiene rigidez y diferentes  tamaños de acuerdo a la porción que se va a empacar.</span><br>
-            <span class="allproducts-description">Materiales que cumplen con lo establecido por la FDA.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Compuestas  de dos cartulinas de 18 puntos ambas caras llevan poliéster metalizado.</span><br>
-            <span class="allproducts-description">En colores oro o plata.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/metallized-layette.jpg">
-          </div>
-        </div>
-        <div class="paleablestops info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Material utilizado para la elaboración de tapas pelables.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">El polietileno con el que se lamina es DSA, y el laminado es compatible para sellado con poliestireno espumado y rígido.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Elaborado a base de un couché  desde 70 a 100g.</span><br>
-            <span class="allproducts-description">Lleva polietileno con aditivo termosellante.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/laminated-paper.jpg">
-          </div>
-        </div>
-        <div class="teapaper info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Material utilizado para la elaboración de sobre de infusiones.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Material resistente.</span><br>
-            <span class="allproducts-description">Cumple con lo establecido por la FDA.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Se utiliza un papel filtro  de 19 a 20g y es sellable a una cara.</span><br>
-            <span class="allproducts-description">Se entregan en bobinas de anchos pequeños al diámetro requerido.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/tea-paper.jpg">
-          </div>
-        </div>
-        <div class="laminatedcartons info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Material utilizado para la elaboración de vasos.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Inocuidad.</span><br>
-            <span class="allproducts-description">Barrera a la grasa y a la humedad.</span><br>
-            <span class="allproducts-description">Especialmente para productos  que van a congelación o refrigeración.</span><br>
-            <span class="allproducts-description">Cumplen con lo establecido por la FDA.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Cartones de calibres desde 10 hasta 28 puntos.</span><br>
-            <span class="allproducts-description">Materiales utilizados; cartulinas sulfatadas, SBS, caples, multicapas y liners.</span><br>
-            <span class="allproducts-description">Llevan una laminación con polietileno.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/laminated-cartons.jpg">
-          </div>
-        </div>
-        <div class="antigreasepaper info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Papel envoltura para alimentos grasos (mantequilla).</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Es resistente a la grasa y humedad.</span><br>
-            <span class="allproducts-description">No altera el sabor del producto.</span><br>
-            <span class="allproducts-description">Los materiales empleados en su fabricación, cumplen con lo establecido por la FDA.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Es un papel blanco con tonalidad cremosa</span><br>
-            <span class="allproducts-description">Puede ser entregado con o sin impresión.</span><br>
-            <span class="allproducts-description">Entregado en boninas o en hojas.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/antigrease-paper.jpg">
-          </div>
-        </div>
-        <div class="thermalbag info-selected-option allproducts-content">
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle helvetica-neue-bold">Uso y aplicaciones</h2>
-            </div>
-            <span class="allproducts-description">Bolsa para guardar alimentos.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Ventajas y beneficios</h2>
-            </div>
-            <span class="allproducts-description">Mantiene la temperatura del alimento que se deseen  guardar.</span><br>
-            <span class="allproducts-description">Ideal para empacar y transportar alimentos.</span>
-            <span class="allproducts-description">Materiales biodegradables.</span>
-          </div>
-          <div class="allproducts-info-container">
-            <div class="allproducts-subtitle-container">
-              <h2 class="allproducts-subtitle">Características</h2>
-            </div>
-            <span class="allproducts-description">Materiales utilizados papel kraft, papel blanco desde 30 hasta 35g, laminado con foil de aluminio de 6 micras.</span>
-          </div>
-          <div class="allproducts-img-container">
-            <img class="allproducts-img" src="img/allproducts/packaging/thermal-bag.jpg">
-          </div>
-        </div>
+      {% endfor %}
       </div>
     </div>
   </div>
