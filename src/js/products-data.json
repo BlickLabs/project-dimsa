@@ -188,26 +188,6 @@
         }
       ],
       "image": "slip-sheet.jpg"
-    },
-    {
-      "data": "speeight",
-      "title": "Cinta gorila",
-      "characteristics": [
-        {
-          "characteristic": "Es una cinta de papel reforzada con  una  malla de fibra de vidrio, el cual está impregnado con un adhesivo rehumectable."
-        }
-      ],
-      "benefits": [
-        {
-          "benefit": "La cinta cuenta con una adhesión extrema para el pegado de cajas de cartón."
-        }
-      ],
-      "uses": [
-        {
-          "use": "Cinta engomada reforzada que sirve para sellar cajas de cartón corrugado de una manera limpia y más segura que una cinta convencional."
-        }
-      ],
-      "image": "gorilla-tape.jpg"
     }
   ],
   "papers": [
